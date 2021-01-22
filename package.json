@@ -1,0 +1,22 @@
+{
+  "name": "cocos-pasteleria",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/prueba.scss css/prueba.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "npm": "^6.14.11"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1"
+  },
+  "description": ""
+}

@@ -1,0 +1,147 @@
+.seccion-index__form div {
+  padding: 1rem; }
+
+.seccion-index__form .seccion-index__form--nombre > label {
+  padding-right: 3.3rem; }
+
+.seccion-index__form .seccion-index__form--apellido > label {
+  padding-right: 3.4rem; }
+
+.seccion-index__form .seccion-index__form--email > label {
+  padding-right: 5rem; }
+
+.seccion-index__form .seccion-index__form--telefono > label {
+  padding-right: 2.9rem; }
+
+.seccion-index__form .seccion-index__form--newsletter > label {
+  padding-right: 0.2rem; }
+
+.seccion-index__form .seccion-index__form--consulta > label {
+  padding-right: 2.6rem; }
+
+.seccion-index__form .seccion-index__form--consulta > textarea {
+  resize: none;
+  font-size: medium;
+  border-color: white; }
+
+.seccion-index__form .seccion-index__form--borrar-enviar {
+  display: flex;
+  justify-content: space-evenly; }
+
+.sectionContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+header {
+  background-image: url("../assets/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 55%;
+  opacity: 90%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  header div > img {
+    height: 10rem;
+    opacity: 100%;
+    padding-top: 0.5rem; }
+  header nav {
+    margin-bottom: 0.7rem; }
+    @media (max-width: 800px) {
+      header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; } }
+  header nav > a {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    margin-right: 2rem; }
+    @media (max-width: 770px) {
+      header nav > a {
+        padding: 5px; } }
+  header nav > a:hover {
+    background-image: linear-gradient(#d9a7c7, #fffcdc);
+    color: #3f3a3f; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 3rem; }
+  footer p {
+    text-decoration: underline; }
+  footer img {
+    height: 7rem; }
+  footer li a:hover, footer div a:hover {
+    color: #8f1d8f; }
+
+.sectionIndex {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 8rem 0rem 8rem; }
+  .sectionIndex div {
+    display: flex;
+    flex-direction: column; }
+  .sectionIndex a {
+    overflow: hidden; }
+  .sectionIndex img:hover {
+    transform: scale(1.5);
+    -webkit-transition: transform 0.5s ease-in; }
+  .sectionIndex h1 {
+    font-size: 1.8rem;
+    margin-top: 2rem; }
+  .sectionIndex img {
+    height: 25rem; }
+
+.sectionTortas h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem; }
+
+.sectionTortas img {
+  height: 25rem; }
+
+.sectionDulces img {
+  height: 25rem; }
+
+.sectionDulces h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem; }
+
+.sectionDulces > div {
+  display: flex;
+  justify-content: center; }
+
+.sectionDesayunos h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem; }
+
+.sectionDesayunos img {
+  height: 20rem;
+  margin-top: 2rem; }
+
+.sectionContacto h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem; }
+
+.dulces {
+  padding: 2rem 3rem 2rem 0rem; }
+  .dulces h2 {
+    font-size: 1.5rem; }
+  @media (max-width: 960px) {
+    .dulces img {
+      height: 20rem; } }
+  @media (max-width: 840px) {
+    .dulces img {
+      height: 15rem; } }
+  @media (max-width: 660px) {
+    .dulces img {
+      height: 10rem; } }

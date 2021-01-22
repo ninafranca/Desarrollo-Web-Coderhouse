@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocos Pasteleria</title>
+    <link rel="icon" type="image/png" href="../assets/logofavi.png" height="100">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/prueba.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div><img src="../assets/cocoslogo.png" alt="Cocos"></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./tortas.html">Tortas</a>
+            <a href="./dulces.html">Dulces y Otros</a>
+            <a href="./desayunos.html">Desayunos Especiales</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="sectionContacto container seccion-index">
+        <h1 class="seccion-index__titulo">Contacto</h1>
+        <form class="seccion-index__form">
+            <div class="seccion-index__form__elemento seccion-index__form--nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" class="rounded">
+            </div>
+            <div class="seccion-index__form__elemento seccion-index__form--apellido">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" class="rounded">
+            </div>
+            <div class="seccion-index__form__elemento seccion-index__form--email">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" class="rounded">
+            </div>
+            <div class="seccion-index__form__elemento seccion-index__form--telefono">
+                <label for="telefono">Teléfono</label>
+                <input type="number" name="telefono" class="rounded">
+            </div>
+            <div class="seccion-index__form__elemento seccion-index__form--consulta">
+                <label for="consulta">Consulta</label>
+                <textarea type="text" name="consulta" cols="42" rows="5" class="rounded"></textarea>
+            </div>
+            <div class="seccion-index__form__elemento seccion-index__form--newsletter">
+                <label for="news">Recibir Newsletter</label>
+                <input type="checkbox" value="si" name="news" id="si">
+            </div>
+            <div class="botones seccion-index__form__elemento seccion-index__form--borrar-enviar">
+                <div class="boton">
+                    <button type="reset" class="rounded">Borrar</button>
+                </div>
+                <div class="boton">
+                    <button type="reset" class="rounded">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div>
+            <p>Secciones</p>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./tortas.html">Tortas</a>
+                </li>
+                <li>
+                    <a href="./dulces.html">Dulces y Otros</a>
+                </li>
+                <li>
+                    <a href="./desayunos.html">Desayunos Especiales</a>
+                </li>
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <img src="../assets/logo.png" alt="Logo">
+        <div>
+            <p>Red Social</p>
+            <a href="https://www.instagram.com/cocos_pasteleria/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
