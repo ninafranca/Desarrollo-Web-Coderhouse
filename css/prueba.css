@@ -1,51 +1,16 @@
-.seccion-index__form div {
-  padding: 1rem; }
-
-.seccion-index__form .seccion-index__form--nombre > label {
-  padding-right: 3.3rem; }
-
-.seccion-index__form .seccion-index__form--apellido > label {
-  padding-right: 3.4rem; }
-
-.seccion-index__form .seccion-index__form--email > label {
-  padding-right: 5rem; }
-
-.seccion-index__form .seccion-index__form--telefono > label {
-  padding-right: 2.9rem; }
-
-.seccion-index__form .seccion-index__form--newsletter > label {
-  padding-right: 0.2rem; }
-
-.seccion-index__form .seccion-index__form--consulta > label {
-  padding-right: 2.6rem; }
-
-.seccion-index__form .seccion-index__form--consulta > textarea {
-  resize: none;
-  font-size: medium;
-  border-color: white; }
-
-.seccion-index__form .seccion-index__form--borrar-enviar {
-  display: flex;
-  justify-content: space-evenly; }
-
-.sectionContacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
 header {
   background-image: url("../assets/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 55%;
   opacity: 90%;
-  height: 30vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
-  header div > img {
-    height: 10rem;
+  header div > a > img {
+    height: 7rem;
     opacity: 100%;
     padding-top: 0.5rem; }
   header nav {
@@ -68,17 +33,55 @@ header {
     background-image: linear-gradient(#d9a7c7, #fffcdc);
     color: #3f3a3f; }
 
+@keyframes latido {
+  0% {
+    transform: scale(1); }
+  25% {
+    transform: scale(1.1); }
+  40% {
+    transform: scale(1); }
+  60% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+
+header img:hover {
+  animation-name: latido;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; }
+
+.navA {
+  display: flex;
+  flex-direction: column; }
+
 footer {
+  background-color: #d5a8d5;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-  margin-top: 3rem; }
-  footer p {
-    text-decoration: underline; }
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  font-size: 1rem; }
   footer img {
     height: 7rem; }
   footer li a:hover, footer div a:hover {
-    color: #8f1d8f; }
+    color: #f8f7f8; }
+  footer .divFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+
+.ig, .mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .ig img, .mail img {
+    width: 7rem;
+    height: 5.5rem; }
+
+.mail img {
+  width: 8rem;
+  height: 5rem; }
 
 .sectionIndex {
   display: flex;
@@ -87,11 +90,9 @@ footer {
   .sectionIndex div {
     display: flex;
     flex-direction: column; }
-  .sectionIndex a {
-    overflow: hidden; }
   .sectionIndex img:hover {
-    transform: scale(1.5);
-    -webkit-transition: transform 0.5s ease-in; }
+    transform: scale(1.1);
+    -webkit-transition: transform 0.2s ease-in; }
   .sectionIndex h1 {
     font-size: 1.8rem;
     margin-top: 2rem; }
@@ -118,20 +119,6 @@ footer {
   display: flex;
   justify-content: center; }
 
-.sectionDesayunos h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 2rem; }
-
-.sectionDesayunos img {
-  height: 20rem;
-  margin-top: 2rem; }
-
-.sectionContacto h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 2rem; }
-
 .dulces {
   padding: 2rem 3rem 2rem 0rem; }
   .dulces h2 {
@@ -145,3 +132,75 @@ footer {
   @media (max-width: 660px) {
     .dulces img {
       height: 10rem; } }
+
+.sectionDesayunos h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem; }
+
+.sectionDesayunos img {
+  height: 20rem;
+  margin-top: 2rem; }
+
+/*.desayunos {
+    display: flex;
+    flex-direction: column;
+    & >div {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.5rem;
+    }
+}*/
+.desayunos {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto); }
+
+.sectionContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .sectionContacto h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem; }
+
+.seccion-index__form {
+  font-size: 1.5rem; }
+  .seccion-index__form div {
+    padding: 1rem; }
+  .seccion-index__form .seccion-index__form--nombre > label {
+    padding-right: 3.3rem; }
+  .seccion-index__form .seccion-index__form--nombre > input {
+    width: 22rem;
+    height: 2rem;
+    font-size: 1rem; }
+  .seccion-index__form .seccion-index__form--apellido > label {
+    padding-right: 3.4rem; }
+  .seccion-index__form .seccion-index__form--apellido > input {
+    width: 22rem;
+    height: 2rem;
+    font-size: 1rem; }
+  .seccion-index__form .seccion-index__form--email > label {
+    padding-right: 4.5rem; }
+  .seccion-index__form .seccion-index__form--email > input {
+    width: 22rem;
+    height: 2rem;
+    font-size: 1rem; }
+  .seccion-index__form .seccion-index__form--telefono > label {
+    padding-right: 2.9rem; }
+  .seccion-index__form .seccion-index__form--telefono > input {
+    width: 22rem;
+    height: 2rem;
+    font-size: 1rem; }
+  .seccion-index__form .seccion-index__form--newsletter > label {
+    padding-right: 0.2rem; }
+  .seccion-index__form .seccion-index__form--consulta > label {
+    padding-right: 2.7rem; }
+  .seccion-index__form .seccion-index__form--consulta > textarea {
+    resize: none;
+    font-size: medium;
+    border-color: white; }
+  .seccion-index__form .seccion-index__form--borrar-enviar {
+    display: flex;
+    justify-content: space-evenly; }

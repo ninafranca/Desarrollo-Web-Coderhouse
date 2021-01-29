@@ -1,37 +1,16 @@
-.seccion-index__form {
-    & div {padding: 1rem;}
-    & .seccion-index__form--nombre>label {padding-right: 3.3rem;}
-    & .seccion-index__form--apellido>label {padding-right: 3.4rem;}
-    & .seccion-index__form--email>label {padding-right: 5rem;}
-    & .seccion-index__form--telefono>label {padding-right: 2.9rem;}
-    & .seccion-index__form--newsletter>label {padding-right: 0.2rem;}
-    & .seccion-index__form--consulta>label {padding-right: 2.6rem;}
-    & .seccion-index__form--consulta>textarea {resize: none;
-                                            font-size: medium;
-                                            border-color: white;}
-    & .seccion-index__form--borrar-enviar {display: flex;
-                                        justify-content: space-evenly;}
-}
-
-.sectionContacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 header {
     background-image: url("../assets/banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 55%;
     opacity: 90%;
-    height: 30vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    & div>img {
-        height: 10rem;
+    & div>a>img {
+    height: 7rem;
     opacity: 100%;
     padding-top: 0.5rem;
     }
@@ -59,17 +38,69 @@ header {
     }
 }
 
+@keyframes latido {
+    0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.1);
+      }
+      40% {
+        transform: scale(1);
+      }
+      60% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+}
+
+header img:hover {
+    animation-name: latido;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.navA {
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
+    background-color:rgb(213, 168, 213);
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-top: 3rem;
-    & p {text-decoration: underline;}
+    font-size: 1rem;
     & img {height: 7rem;}
     & li a:hover, div a:hover {
-        color: rgb(143, 29, 143);
-    }
+    color: rgb(248, 247, 248);
 }
+
+.divFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+}
+
+.ig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    & img {width: 7rem;
+           height: 5.5rem;}
+}
+
+.mail {
+    @extend .ig;
+    & img {width: 8rem;
+           height: 5rem;}
+}
+
 
 .sectionIndex {
     display: flex;
@@ -80,11 +111,11 @@ footer {
         flex-direction: column;
     }
     & a {
-        overflow: hidden;
+        
     }
     & img:hover {
-        transform: scale(1.5);
-        -webkit-transition: transform 0.5s ease-in;
+        transform: scale(1.1);
+        -webkit-transition: transform 0.2s ease-in;
     }
     & h1 {
         font-size: 1.8rem;
@@ -121,26 +152,6 @@ footer {
     }
 }
 
-.sectionDesayunos {
-    & h1 {
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 2rem;
-    }
-    & img {
-        height: 20rem;
-        margin-top: 2rem;
-    }
-}
-
-.sectionContacto {
-    & h1 {
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 2rem;
-    }
-}
-
 .dulces {
     padding: 2rem 3rem 2rem 0rem;
     & h2 {
@@ -158,3 +169,72 @@ footer {
         }
     }
 }
+
+.sectionDesayunos {
+    & h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    & img {
+        height: 20rem;
+        margin-top: 2rem;
+    }
+}
+
+/*.desayunos {
+    display: flex;
+    flex-direction: column;
+    & >div {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.5rem;
+    }
+}*/
+
+.desayunos {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+
+}
+
+.sectionContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+.seccion-index__form {
+    font-size: 1.5rem;
+    & div {padding: 1rem;}
+    & .seccion-index__form--nombre>label {padding-right: 3.3rem;}
+    & .seccion-index__form--nombre>input {width: 22rem; height: 2rem; font-size: 1rem;}
+    & .seccion-index__form--apellido>label {padding-right: 3.4rem;}
+    & .seccion-index__form--apellido>input {width: 22rem; height: 2rem; font-size: 1rem;}
+    & .seccion-index__form--email>label {padding-right: 4.5rem;}
+    & .seccion-index__form--email>input {width: 22rem; height: 2rem; font-size: 1rem;}
+    & .seccion-index__form--telefono>label {padding-right: 2.9rem;}
+    & .seccion-index__form--telefono>input {width: 22rem; height: 2rem; font-size: 1rem;}
+    & .seccion-index__form--newsletter>label {padding-right: 0.2rem;}
+    & .seccion-index__form--consulta>label {padding-right: 2.7rem;}
+    & .seccion-index__form--consulta>textarea {resize: none;
+                                            font-size: medium;
+                                            border-color: white;}
+    & .seccion-index__form--borrar-enviar {display: flex;
+                                        justify-content: space-evenly;}
+}
+
+
+.ig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    & img {width: 7rem;
+           height: 5.5rem;}
