@@ -11,7 +11,6 @@ header {
     align-items: center;
     & div>a>img {
     height: 7rem;
-    opacity: 100%;
     padding-top: 0.5rem;
     }
     & nav {
@@ -32,7 +31,7 @@ header {
             padding: 5px;
         }
     }
-    & nav > a:hover {
+    & nav>a:hover {
         background-image: linear-gradient(#d9a7c7, #fffcdc);
         color: rgb(63, 58, 63);
     }
@@ -74,6 +73,7 @@ footer {
     padding: 1rem 2rem;
     margin-top: 3rem;
     font-size: 1rem;
+    max-width: 100%;
     & img {height: 7rem;}
     & li a:hover, div a:hover {
     color: rgb(248, 247, 248);
@@ -91,6 +91,9 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    & img:hover {
+        transform: scale(1.1);
+        -webkit-transition: transform 0.15s ease-in;}
     & img {width: 7rem;
            height: 5.5rem;}
 }
@@ -105,21 +108,21 @@ footer {
 .sectionIndex {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 8rem 0rem 8rem;
+    padding-top: 2rem;
     & div {
         display: flex;
         flex-direction: column;
     }
     & a {
-        
+        overflow: hidden;
     }
     & img:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
         -webkit-transition: transform 0.2s ease-in;
     }
     & h1 {
         font-size: 1.8rem;
-        margin-top: 2rem;
+        padding-top: 1rem;
     }
     & img {
         height: 25rem;
@@ -177,8 +180,11 @@ footer {
         margin-top: 2rem;
     }
     & img {
-        height: 20rem;
-        margin-top: 2rem;
+        height: 22rem;
+    }
+    & img:hover {
+        transform: scale(1.2);
+        -webkit-transition: transform 0.2s ease-in;
     }
 }
 
@@ -193,10 +199,22 @@ footer {
 }*/
 
 .desayunos {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(4, auto);
-
+    grid-template-rows: repeat(4, auto);*/
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    & >div {padding-bottom: 4rem;}
+    & .caja-feliz, .caja-cumple, .caja-michi, .caja-loro {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    & h2 {font-size: 1.8rem;
+        padding-bottom: 0.7rem;}
+    & li {line-height: 2rem;}
 }
 
 .sectionContacto {
@@ -228,13 +246,7 @@ footer {
                                             border-color: white;}
     & .seccion-index__form--borrar-enviar {display: flex;
                                         justify-content: space-evenly;}
+    & button {font-size: 1.2rem; padding: 0.2rem;}
 }
 
 
-.ig {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    & img {width: 7rem;
-           height: 5.5rem;}

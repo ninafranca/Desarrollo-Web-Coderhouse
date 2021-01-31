@@ -11,7 +11,6 @@ header {
   align-items: center; }
   header div > a > img {
     height: 7rem;
-    opacity: 100%;
     padding-top: 0.5rem; }
   header nav {
     margin-bottom: 0.7rem; }
@@ -60,7 +59,8 @@ footer {
   justify-content: space-between;
   padding: 1rem 2rem;
   margin-top: 3rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+  max-width: 100%; }
   footer img {
     height: 7rem; }
   footer li a:hover, footer div a:hover {
@@ -75,6 +75,9 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly; }
+  .ig img:hover, .mail img:hover {
+    transform: scale(1.1);
+    -webkit-transition: transform 0.15s ease-in; }
   .ig img, .mail img {
     width: 7rem;
     height: 5.5rem; }
@@ -86,16 +89,18 @@ footer {
 .sectionIndex {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 8rem 0rem 8rem; }
+  padding-top: 2rem; }
   .sectionIndex div {
     display: flex;
     flex-direction: column; }
+  .sectionIndex a {
+    overflow: hidden; }
   .sectionIndex img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     -webkit-transition: transform 0.2s ease-in; }
   .sectionIndex h1 {
     font-size: 1.8rem;
-    margin-top: 2rem; }
+    padding-top: 1rem; }
   .sectionIndex img {
     height: 25rem; }
 
@@ -139,8 +144,11 @@ footer {
   margin-top: 2rem; }
 
 .sectionDesayunos img {
-  height: 20rem;
-  margin-top: 2rem; }
+  height: 22rem; }
+
+.sectionDesayunos img:hover {
+  transform: scale(1.2);
+  -webkit-transition: transform 0.2s ease-in; }
 
 /*.desayunos {
     display: flex;
@@ -152,9 +160,24 @@ footer {
     }
 }*/
 .desayunos {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(4, auto); }
+  /*display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);*/
+  padding-top: 3rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column; }
+  .desayunos > div {
+    padding-bottom: 4rem; }
+  .desayunos .caja-feliz, .desayunos .caja-cumple, .desayunos .caja-michi, .desayunos .caja-loro {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; }
+  .desayunos h2 {
+    font-size: 1.8rem;
+    padding-bottom: 0.7rem; }
+  .desayunos li {
+    line-height: 2rem; }
 
 .sectionContacto {
   display: flex;
@@ -204,3 +227,6 @@ footer {
   .seccion-index__form .seccion-index__form--borrar-enviar {
     display: flex;
     justify-content: space-evenly; }
+  .seccion-index__form button {
+    font-size: 1.2rem;
+    padding: 0.2rem; }
