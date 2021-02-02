@@ -49,60 +49,38 @@ header img:hover {
   animation-duration: 1.5s;
   animation-iteration-count: infinite; }
 
-.navA {
-  display: flex;
-  flex-direction: column; }
-
-footer {
-  background-color: #d5a8d5;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  margin-top: 3rem;
-  font-size: 1rem;
-  max-width: 100%; }
-  footer img {
-    height: 7rem; }
-  footer li a:hover, footer div a:hover {
-    color: #f8f7f8; }
-  footer .divFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; }
-
-.ig, .mail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly; }
-  .ig img:hover, .mail img:hover {
-    transform: scale(1.1);
-    -webkit-transition: transform 0.15s ease-in; }
-  .ig img, .mail img {
-    width: 7rem;
-    height: 5.5rem; }
-
-.mail img {
-  width: 8rem;
-  height: 5rem; }
-
+/*
 .sectionIndex {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 2rem; }
-  .sectionIndex div {
     display: flex;
-    flex-direction: column; }
-  .sectionIndex a {
-    overflow: hidden; }
-  .sectionIndex img:hover {
-    transform: scale(1.2);
-    -webkit-transition: transform 0.2s ease-in; }
-  .sectionIndex h1 {
-    font-size: 1.8rem;
-    padding-top: 1rem; }
-  .sectionIndex img {
-    height: 25rem; }
+    justify-content: space-between;
+    padding-top: 2rem;
+    & div {
+        display: flex;
+        flex-direction: column;
+    }
+    & a {
+        overflow: hidden;
+    }
+    & img:hover {
+        transform: scale(1.2);
+        -webkit-transition: transform 0.2s ease-in;
+    }
+    & h1 {
+        font-size: 1.8rem;
+        padding-top: 1rem;
+    }
+    & img {
+        height: 25rem;
+    }
+} */
+.section-index {
+  background-image: url("../assets/ideas/vidriera1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50rem;
+  margin-bottom: -6rem; }
+  .section-index a > div {
+    height: 50rem; }
 
 .sectionTortas h1 {
   font-size: 2rem;
@@ -230,3 +208,36 @@ footer {
   .seccion-index__form button {
     font-size: 1.2rem;
     padding: 0.2rem; }
+
+footer {
+  background-color: #d5a8d5;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+  max-width: 100%; }
+  footer img {
+    height: 7rem; }
+  footer li a:hover, footer div a:hover {
+    color: #f8f7f8; }
+  footer .divFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+
+.ig, .mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .ig img:hover, .mail img:hover {
+    transform: scale(1.1);
+    -webkit-transition: transform 0.15s ease-in; }
+  .ig img, .mail img {
+    width: 7rem;
+    height: 5.5rem; }
+
+.mail img {
+  width: 8rem;
+  height: 5rem; }
