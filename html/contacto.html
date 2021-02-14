@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/prueba.css">
+    <link rel="stylesheet" href="../css/keyframes.css">
+    <link rel="stylesheet" href="../css/media-query.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -22,49 +24,59 @@
         </div>
         <nav>
             <a href="./tortas.html">Tortas</a>
-            <a href="./dulces.html">Dulces y Otros</a>
+            <a href="./delicias.html">Delicias</a>
             <a href="./desayunos.html">Desayunos Especiales</a>
+            <a href="./nosotros.html">Nosotros</a>
             <a href="#">Contacto</a>
         </nav>
     </header>
 
-    <section class="sectionContacto container">
-        <h1 class="seccion-index__titulo"><strong>Contacto</strong></h1>
-        <form class="seccion-index__form">
-            <div class="seccion-index__form__elemento seccion-index__form--nombre">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="rounded">
+    <section class="section-contacto container">
+        <h1><strong>Contacto</strong></h1>
+        <div>
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26303.094956375484!2d-58.54024522826705!3d-34.50575223714816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba64ba48f9cb%3A0xd61b4bdbdfb6d529!2sBoulogne%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1613089298723!5m2!1ses-419!2sar" width="600" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
-            <div class="seccion-index__form__elemento seccion-index__form--apellido">
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" class="rounded">
-            </div>
-            <div class="seccion-index__form__elemento seccion-index__form--email">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" class="rounded">
-            </div>
-            <div class="seccion-index__form__elemento seccion-index__form--telefono">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" name="telefono" class="rounded">
-            </div>
-            <div class="seccion-index__form__elemento seccion-index__form--consulta">
-                <label for="consulta">Consulta</label>
-                <textarea type="text" name="consulta" cols="42" rows="5" class="rounded"></textarea>
-            </div>
-            <div class="seccion-index__form__elemento seccion-index__form--borrar-enviar">
-                <div>
-                    <button type="reset" class="rounded btn-outline-dark">borrar</button>
+            <form class="section-contacto__form">
+                <div class="section-contacto__form--nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" class="rounded">
                 </div>
-                <div>
-                    <button type="reset" class="rounded btn-outline-dark">enviar</button>
+                <div class="section-contacto__form--apellido">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" class="rounded">
                 </div>
-            </div>
-        </form>
+                <div class="section-contacto__form--email">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="rounded">
+                </div>
+                <div class="section-contacto__form--telefono">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="telefono" class="rounded">
+                </div>
+                <div class="section-contacto__form--consulta">
+                    <label for="consulta">Consulta</label>
+                    <textarea type="text" name="consulta" cols="42" rows="5" class="rounded"></textarea>
+                </div>
+                <div class="form-switch section-contacto__form--newsletter">
+                    <label for="flexSwitchCheckChecked">Newsletter</label class=" ">
+                    <input type="checkbox" value="si" name="news" id="flexSwitchCheckChecked" class="form-check-input btn-outline-dark">
+                </div>
+                <div class="section-contacto__form--borrar-enviar">
+                    <div>
+                        <button type="reset" class="rounded btn-outline-dark">borrar</button>
+                    </div>
+                    <div>
+                        <button type="reset" class="rounded btn-outline-dark">enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
 
     <footer>
         <div>
-            <p><strong>Secciones</strong></p>
+            <p><strong>Navegación</strong></p>
             <ul>
                 <li>
                     <a href="../index.html">Home</a>
@@ -73,10 +85,13 @@
                     <a href="./tortas.html">Tortas</a>
                 </li>
                 <li>
-                    <a href="./dulces.html">Dulces y Otros</a>
+                    <a href="./delicias.html">Delicias</a>
                 </li>
                 <li>
                     <a href="./desayunos.html">Desayunos Especiales</a>
+                </li>
+                <li>
+                    <a href="./nosotros.html">Nosotros</a>
                 </li>
                 <li>
                     <a href="#">Contacto</a>
@@ -95,5 +110,7 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>  
+    <script src="../js/cocospasteleria.js"></script>
 </body>
 </html>

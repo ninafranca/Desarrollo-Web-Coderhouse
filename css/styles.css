@@ -3,7 +3,14 @@ html *{
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    -webkit-animation: fadein 0.7s;
+       -moz-animation: fadein 0.7s;
+        -ms-animation: fadein 0.7s;
+         -o-animation: fadein 0.7s;
+            animation: fadein 0.7s;
+    box-sizing: border-box;
 }
+
 
 body {
     background-color: rgb(218, 188, 233);
@@ -11,6 +18,10 @@ body {
     color: rgb(49, 47, 47);
 }
 
+a {
+    text-decoration:none;
+    color: rgb(97, 89, 89);
+}
 
 
 /* HEADER PASADO A SCSS ----
@@ -54,16 +65,15 @@ nav a:hover {
 
 
 
-a {
-    text-decoration:none;
-    color: rgb(97, 89, 89);
-}
-
+/*  NO PASADO A SCSS ----
 ol {
     list-style-position: inside;
 }
+*/
 
-.containerTortas {
+
+/*
+.container-tortas {
     display: grid;
     grid-template-columns: repeat(3, 1fr) ;
     grid-template-rows: repeat(3, 1fr);
@@ -72,13 +82,17 @@ ol {
     display: flex;
     justify-content: center;
 }
+*/
 
+
+/*
 form {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
 }
+*/
 
 
 
@@ -222,7 +236,3 @@ header img:hover {
     animation-iteration-count: infinite;
 }
 */
-
-
-
-

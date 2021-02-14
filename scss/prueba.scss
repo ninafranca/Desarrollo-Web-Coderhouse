@@ -1,3 +1,5 @@
+/* HEADER */
+
 header {
     background-image: url("../assets/banner.jpg");
     background-repeat: no-repeat;
@@ -9,50 +11,37 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    & div>a>img {
+    div>a>img {
     height: 7rem;
     padding-top: 0.5rem;
     }
-    & nav {
+    nav {
         margin-bottom: 0.7rem;
-        @media (max-width: 800px) {
+        @media (max-width: 650px) {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
+            font-size: 0.8rem;
         }
     }
-    & nav>a {
+    nav>a {
         border-style: solid;
         border-radius: 5px;
         border-width: 2px;
         padding: 0.2rem 1rem 0.2rem 1rem;
         margin-right: 2rem;
-        @media (max-width:770px) {
-            padding: 5px;
+        @media (max-width:620px) {
+            padding: 1.5px;
+            font-size: 0.7rem;
+        }
+        @media (max-width:768px) {
+            padding: 1.7px;
+            font-size: 0.8rem;
         }
     }
-    & nav>a:hover {
+    nav>a:hover {
         background-image: linear-gradient(#d9a7c7, #fffcdc);
         color: rgb(63, 58, 63);
     }
-}
-
-@keyframes latido {
-    0% {
-        transform: scale(1);
-      }
-      25% {
-        transform: scale(1.1);
-      }
-      40% {
-        transform: scale(1);
-      }
-      60% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
 }
 
 header img:hover {
@@ -61,159 +50,300 @@ header img:hover {
     animation-iteration-count: infinite;
 }
 
-/*
-.sectionIndex {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2rem;
-    & div {
-        display: flex;
-        flex-direction: column;
-    }
-    & a {
-        overflow: hidden;
-    }
-    & img:hover {
-        transform: scale(1.2);
-        -webkit-transition: transform 0.2s ease-in;
-    }
-    & h1 {
-        font-size: 1.8rem;
-        padding-top: 1rem;
-    }
-    & img {
-        height: 25rem;
-    }
-} */
+/* SECCION INDEX */
 
 .section-index {
-    background-image: url("../assets/ideas/vidriera1.jpg");
+    background-image: url("../assets/vidriera-cocos-fondo.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50rem;
-    margin-bottom: -6rem;
-    & a>div {height: 50rem;}
+    height: 100%;
+    margin-bottom: -3rem;    
+    a>div {height: 50rem;}
+    img {height: 100%}
+    .section-index-container {position: relative;}
+    .cartel-open {
+        img {height: 6rem;}
+        position: absolute;
+        top: 38.5%;
+        left: 45.5%;
+        transform: translate(-50%, -50%);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-animation: swinging 2s ease-in-out forwards infinite;
+        animation: swinging 2s ease-in-out forwards infinite;
+    }
 }
 
-.sectionTortas {
-    & h1 {
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 2rem;
-    }
-    & img {
-        height: 25rem;
-    }
-}
+/* SECCION TORTAS */
 
-.sectionDulces {
-    & img {
-        height: 25rem;
-    }
-    & h1 {
+.section-tortas {
+    box-shadow: 0 0 10px gray;
+    margin: 3rem;
+    h1 {
         font-size: 2rem;
         text-align: center;
-        margin-top: 2rem;
+        padding-top: 1rem;
+        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
     }
-    & >div {
+    >div {
+        display: flex;
+        justify-content: center;
+    }
+    .carousel {
+        width: 35rem;
+        h2 {
+            font-size: 2rem; 
+            text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em
+        }
+        p {font-size: 1.3rem;}
+    }
+    .container-tortas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2%;
+        padding-top: 1rem;
         display: flex;
         justify-content: center;
     }
 }
 
-.dulces {
-    padding: 2rem 3rem 2rem 0rem;
-    & h2 {
-        font-size: 1.5rem;
-    }
-    & img {
-        @media (max-width: 960px) {
-            height: 20rem;
-        }
-        @media (max-width: 840px) {
-            height: 15rem;
-        }
-        @media (max-width: 660px) {
-            height: 10rem;
-        }
-    }
-}
+/* SECCION DELICIAS */
 
-.sectionDesayunos {
-    & h1 {
+.section-delicias {
+    box-shadow: 0 0 10px gray;
+    margin-top: 3rem;
+    img {
+        height: 25rem;
+        box-shadow: 0 0 10px gray;
+    }
+    h1 {
         font-size: 2rem;
         text-align: center;
-        margin-top: 2rem;
-    }
-    & img {
-        height: 22rem;
-    }
-    & img:hover {
-        transform: scale(1.2);
-        -webkit-transition: transform 0.2s ease-in;
+        padding-top: 1rem;
+        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
     }
 }
 
-/*.desayunos {
-    display: flex;
-    flex-direction: column;
-    & >div {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 1.5rem;
+.section-delicias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+}
+
+.delicias {
+    padding-top: 1rem;
+    button {
+        font-size: 1.4rem;
+        @media (max-width: 992px) {font-size: 1.2rem;}
+        @media (max-width: 768px) {font-size: 0.9rem;}
     }
-}*/
+    img {
+        @media (min-width: 1200px) {height: 30rem;}
+        @media (max-width: 992px) {height: 20rem;}
+        @media (max-width: 768px) {height: 15rem;}
+    }
+}
+
+/* SECCION DESAYUNOS */
+
+.section-desayunos {
+    box-shadow: 0 0 10px gray;
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 1rem;
+        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+    }
+    img {
+        height: 22rem;
+        box-shadow: 0 0 10px gray;
+    }
+}
 
 .desayunos {
     /*display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);*/
-    padding-top: 3rem;
+    padding-top: 1rem;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    & >div {padding-bottom: 4rem;}
-    & .caja-feliz, .caja-cumple, .caja-michi, .caja-loro {
+    >div {padding-bottom: 4rem;}
+    .caja-feliz, .caja-cumple, .caja-michi, .caja-loro {
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
     }
-    & h2 {font-size: 1.8rem;
+    h2 {font-size: 1.8rem;
         padding-bottom: 0.7rem;}
-    & li {line-height: 2rem;}
+    li {line-height: 2rem;}
 }
 
-.sectionContacto {
+/* SECCION NOSOTROS */
+
+.section-nosotros {
+    box-shadow: 0 0 10px gray;
     display: flex;
     flex-direction: column;
     align-items: center;
-    & h1 {
+    margin-top: 3rem;
+    h1 {
         font-size: 2rem;
         text-align: center;
-        margin-top: 2rem;
+        margin: 1rem 0rem 1rem 0rem;
+        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+    }
+    img {
+        height: 32rem;
+        box-shadow: 0 0 10px gray;
+    }
+    div {
+        font-size: 1rem;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            align-self: center;
+            text-decoration: underline;
+        }
+        >div {
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
 }
 
-.seccion-index__form {
-    font-size: 1.5rem;
-    & div {padding: 1rem;}
-    & .seccion-index__form--nombre>label {padding-right: 3.3rem;}
-    & .seccion-index__form--nombre>input {width: 22rem; height: 2rem; font-size: 1rem;}
-    & .seccion-index__form--apellido>label {padding-right: 3.4rem;}
-    & .seccion-index__form--apellido>input {width: 22rem; height: 2rem; font-size: 1rem;}
-    & .seccion-index__form--email>label {padding-right: 4.5rem;}
-    & .seccion-index__form--email>input {width: 22rem; height: 2rem; font-size: 1rem;}
-    & .seccion-index__form--telefono>label {padding-right: 2.9rem;}
-    & .seccion-index__form--telefono>input {width: 22rem; height: 2rem; font-size: 1rem;}
-    & .seccion-index__form--newsletter>label {padding-right: 0.2rem;}
-    & .seccion-index__form--consulta>label {padding-right: 2.7rem;}
-    & .seccion-index__form--consulta>textarea {resize: none;
-                                            font-size: medium;
-                                            border-color: white;}
-    & .seccion-index__form--borrar-enviar {display: flex;
-                                        justify-content: space-evenly;}
-    & button {font-size: 1.2rem; padding: 0.2rem;}
+/* SECCION CONTACTO */
+
+.section-contacto {
+    box-shadow: 0 0 10px gray;
+    margin-top: 3rem;
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 1rem;
+        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+    }
+    >div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem 0rem;
+    }
+    iframe {
+        box-shadow: 0 0 10px gray; 
+        @media (max-width: 1100px) {
+            height: 35rem;
+            width: 25rem;
+        }
+        @media (max-width: 992px) {
+            height: 32rem;
+            width: 18rem;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    form {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        @media (max-width: 768px) {
+            align-self: center ;
+        }
+    }
+    .section-contacto__form {
+        font-size: 1.5rem;
+        @media (max-width: 992px) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
+        div {padding: 0.7rem;}
+        .section-contacto__form--nombre {
+            display: flex;
+            flex-direction: column;
+            label {
+                padding-right: 3.3rem;
+                padding-bottom: 0.5rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--apellido {
+            display: flex;
+            flex-direction: column;
+            label {
+                padding-right: 3.4rem; 
+                padding-bottom: 0.5rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--email {
+            display: flex;
+            flex-direction: column;
+            label {
+                padding-right: 4.5rem;
+                padding-bottom: 0.5rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--telefono {
+            display: flex;
+            flex-direction: column;
+            label {
+                padding-right: 2.9rem;
+                padding-bottom: 0.5rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--consulta {
+            display: flex;
+            flex-direction: column;
+            label {
+                padding-right: 2.7rem;
+                padding-bottom: 0.5rem;
+            }
+            textarea {
+                resize: none;
+                font-size: medium;
+                border-color: rgb(255, 251, 251);
+            }
+        }
+        .section-contacto__form--newsletter {
+            label {padding-right: 5rem;}
+        }
+        .section-contacto__form--borrar-enviar {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        button {
+            font-size: 1.2rem; 
+            padding: 0.2rem;
+        }
+    }
 }
+
+/* FOOTER */
 
 footer {
     background-color:rgb(213, 168, 213);
@@ -223,16 +353,16 @@ footer {
     margin-top: 3rem;
     font-size: 1rem;
     max-width: 100%;
-    & img {height: 7rem;}
-    & li a:hover, div a:hover {
+    img {height: 7rem;}
+    li a:hover, div a:hover {
     color: rgb(248, 247, 248);
+    }
 }
 
-.divFooter {
+.div-Footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
 }
 
 .ig {
@@ -240,15 +370,18 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    & img:hover {
+    img:hover {
         transform: scale(1.1);
-        -webkit-transition: transform 0.15s ease-in;}
-    & img {width: 7rem;
-           height: 5.5rem;}
+        -webkit-transition: transform 0.15s ease-in;
+    }
+    img {
+        width: 7rem;
+        height: 5.5rem;
+    }
 }
 
 .mail {
     @extend .ig;
-    & img {width: 8rem;
+    img {width: 8rem;
            height: 5rem;}
 }
