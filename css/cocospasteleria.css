@@ -5,7 +5,7 @@ header {
   background-size: cover;
   background-position: center 55%;
   opacity: 90%;
-  height: 25vh;
+  height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,9 +13,13 @@ header {
   header div > a > img {
     height: 7rem;
     padding-top: 0.5rem; }
+    header div > a > img :hover {
+      animation-name: latido;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite; }
   header nav {
     margin-bottom: 0.7rem; }
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
       header nav {
         display: flex;
         justify-content: center;
@@ -26,10 +30,6 @@ header {
     border-width: 2px;
     padding: 0.2rem 1rem 0.2rem 1rem;
     margin-right: 2rem; }
-    @media (max-width: 620px) {
-      header nav > a {
-        padding: 1.5px;
-        font-size: 0.7rem; } }
     @media (max-width: 768px) {
       header nav > a {
         padding: 1.7px;
@@ -38,30 +38,23 @@ header {
     background-image: linear-gradient(#d9a7c7, #fffcdc);
     color: #3f3a3f; }
 
-header img:hover {
-  animation-name: latido;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite; }
-
 /* SECCION INDEX */
 .section-index {
   background-image: url("../assets/vidriera-cocos-fondo.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
   margin-bottom: -3rem; }
   .section-index a > div {
-    height: 50rem; }
-  .section-index img {
-    height: 100%; }
+    height: 105vh; }
   .section-index .section-index-container {
-    position: relative; }
+    position: relative;
+    display: flex;
+    justify-content: center; }
   .section-index .cartel-open {
     position: absolute;
-    top: 38.5%;
+    top: 37.3%;
     left: 45.5%;
-    transform: translate(-50%, -50%);
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
     -webkit-animation: swinging 2s ease-in-out forwards infinite;
@@ -72,68 +65,64 @@ header img:hover {
 /* SECCION TORTAS */
 .section-tortas {
   box-shadow: 0 0 10px gray;
-  margin: 3rem; }
+  margin: 3rem 6.5rem; }
   .section-tortas h1 {
     font-size: 2rem;
     text-align: center;
-    padding-top: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
     text-shadow: #777676 0.1em 0.1em 0.2em; }
   .section-tortas > div {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-bottom: 1rem; }
   .section-tortas .carousel {
     width: 35rem; }
     .section-tortas .carousel h2 {
       font-size: 2rem;
       text-shadow: white 0.1em 0.1em 0.2em; }
     .section-tortas .carousel p {
-      font-size: 1.3rem; }
-  .section-tortas .container-tortas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 2%;
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center; }
+      font-size: 1.3rem;
+      text-shadow: #777676 0.1em 0.1em 0.2em; }
 
 /* SECCION DELICIAS */
 .section-delicias {
   box-shadow: 0 0 10px gray;
   margin-top: 3rem; }
-  .section-delicias img {
-    height: 25rem;
-    box-shadow: 0 0 10px gray; }
   .section-delicias h1 {
     font-size: 2rem;
     text-align: center;
     padding-top: 1rem;
     text-shadow: #777676 0.1em 0.1em 0.2em; }
-
-.section-delicias-grid {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(4, auto); }
-
-.delicias {
-  padding-top: 1rem; }
-  .delicias button {
-    font-size: 1.4rem; }
-    @media (max-width: 992px) {
-      .delicias button {
-        font-size: 1.2rem; } }
-    @media (max-width: 768px) {
-      .delicias button {
-        font-size: 0.9rem; } }
-  @media (min-width: 1200px) {
-    .delicias img {
-      height: 30rem; } }
-  @media (max-width: 992px) {
-    .delicias img {
-      height: 20rem; } }
-  @media (max-width: 768px) {
-    .delicias img {
-      height: 15rem; } }
+  .section-delicias .section-delicias-grid {
+    /*display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(4, auto);*/
+    /*grid-gap: 1rem;*/
+    padding-left: 1rem; }
+    .section-delicias .section-delicias-grid img {
+      height: 25rem;
+      box-shadow: 0 0 10px gray; }
+    .section-delicias .section-delicias-grid div {
+      /*display: flex;
+            flex-direction: column;*/
+      padding-top: 1rem; }
+      .section-delicias .section-delicias-grid div button {
+        font-size: 1.4rem; }
+        @media (max-width: 992px) {
+          .section-delicias .section-delicias-grid div button {
+            font-size: 1.1rem; } }
+        @media (max-width: 768px) {
+          .section-delicias .section-delicias-grid div button {
+            font-size: 0.8rem; } }
+      @media (min-width: 1200px) {
+        .section-delicias .section-delicias-grid div img {
+          height: 30rem; } }
+      @media (max-width: 992px) {
+        .section-delicias .section-delicias-grid div img {
+          height: 18rem; } }
+      @media (max-width: 768px) {
+        .section-delicias .section-delicias-grid div img {
+          height: 12rem; } }
 
 /* SECCION DESAYUNOS */
 .section-desayunos {
@@ -146,26 +135,25 @@ header img:hover {
   .section-desayunos img {
     height: 22rem;
     box-shadow: 0 0 10px gray; }
-
-.desayunos {
-  /*display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(4, auto);*/
-  padding-top: 1rem;
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column; }
-  .desayunos > div {
-    padding-bottom: 4rem; }
-  .desayunos .caja-feliz, .desayunos .caja-cumple, .desayunos .caja-michi, .desayunos .caja-loro {
+  .section-desayunos .desayunos {
+    /*display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);*/
+    padding-top: 1rem;
+    font-size: 1.5rem;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start; }
-  .desayunos h2 {
-    font-size: 1.8rem;
-    padding-bottom: 0.7rem; }
-  .desayunos li {
-    line-height: 2rem; }
+    flex-direction: column; }
+    .section-desayunos .desayunos > div {
+      padding-bottom: 4rem; }
+    .section-desayunos .desayunos .caja-feliz, .section-desayunos .desayunos .caja-cumple, .section-desayunos .desayunos .caja-michi, .section-desayunos .desayunos .caja-loro {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start; }
+    .section-desayunos .desayunos h2 {
+      font-size: 1.8rem;
+      padding-bottom: 0.7rem; }
+    .section-desayunos .desayunos li {
+      line-height: 2rem; }
 
 /* SECCION NOSOTROS */
 .section-nosotros {
@@ -182,17 +170,27 @@ header img:hover {
   .section-nosotros img {
     height: 32rem;
     box-shadow: 0 0 10px gray; }
-  .section-nosotros div {
-    font-size: 1rem; }
+  .section-nosotros p {
+    padding: 0rem 1rem; }
+  .section-nosotros > div {
+    font-size: 1.5rem;
+    padding-bottom: 1rem; }
   .section-nosotros article {
     display: flex;
     flex-direction: column; }
     .section-nosotros article h2 {
       align-self: center;
-      text-decoration: underline; }
+      text-decoration: underline;
+      padding: 0.5rem 0rem 1.5rem 0rem; }
+    .section-nosotros article p {
+      padding: 1rem 0rem 0rem 0.5rem; }
     .section-nosotros article > div {
       display: flex;
       justify-content: space-evenly; }
+      @media (max-width: 768px) {
+        .section-nosotros article > div {
+          display: flex;
+          flex-direction: column; } }
 
 /* SECCION CONTACTO */
 .section-contacto {
@@ -206,7 +204,7 @@ header img:hover {
   .section-contacto > div {
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 0rem; }
+    padding: 1rem 0rem; }
   .section-contacto iframe {
     box-shadow: 0 0 10px gray; }
     @media (max-width: 1100px) {
@@ -310,24 +308,17 @@ footer {
     height: 7rem; }
   footer li a:hover, footer div a:hover {
     color: #f8f7f8; }
-
-.div-Footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; }
-
-.ig, .mail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly; }
-  .ig img:hover, .mail img:hover {
-    transform: scale(1.1);
-    -webkit-transition: transform 0.15s ease-in; }
-  .ig img, .mail img {
-    width: 7rem;
-    height: 5.5rem; }
-
-.mail img {
-  width: 8rem;
-  height: 5rem; }
+  footer .ig, footer .mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    footer .ig img:hover, footer .mail img:hover {
+      transform: scale(1.1);
+      -webkit-transition: transform 0.15s ease-in; }
+    footer .ig img, footer .mail img {
+      width: 7rem;
+      height: 5.5rem; }
+  footer .mail img {
+    width: 8rem;
+    height: 5rem; }
