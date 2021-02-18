@@ -15,4 +15,8 @@ Proyecto del sitio web basado en el emprendimiento de pastelería Cocos donde se
 
 ## Autora ✒️
 
+<<<<<<< HEAD
 * **Nina Spinelli**
+=======
+* **Nina Spine
+>>>>>>> 0ed60f0f595bf38fc7f5a34ef4a173055194e5f7
