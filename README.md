@@ -12,11 +12,9 @@ Proyecto del sitio web basado en el emprendimiento de pastelería Cocos donde se
 * [Sass](https://sass-lang.com/)
 * [NPM](https://www.npmjs.com/)
 * [JSON](https://www.json.org/json-en.html)
+* [Git](https://git-scm.com/)
 
 ## Autora ✒️
 
 <<<<<<< HEAD
 * **Nina Spinelli**
-=======
-* **Nina Spine
->>>>>>> 0ed60f0f595bf38fc7f5a34ef4a173055194e5f7
