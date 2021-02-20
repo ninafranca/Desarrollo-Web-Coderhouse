@@ -1,3 +1,5 @@
+/* VARIABLES */
+@import url("./_variables.scss");
 /* HEADER */
 header {
   background-image: url("../assets/banner.jpg");
@@ -10,33 +12,48 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
-  header div > a > img {
-    height: 7rem;
+  header img {
+    height: 7.2rem;
     padding-top: 0.5rem; }
-    header div > a > img :hover {
-      animation-name: latido;
-      animation-duration: 1.5s;
-      animation-iteration-count: infinite; }
+    @media (max-width: 992px) {
+      header img {
+        height: 7rem; } }
+    @media (max-width: 768px) {
+      header img {
+        height: 6.9rem; } }
+  header img:hover {
+    animation-name: latido;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; }
   header nav {
+    font-size: 1.1rem;
     margin-bottom: 0.7rem; }
     @media (max-width: 768px) {
       header nav {
-        display: flex;
-        justify-content: center;
-        font-size: 0.8rem; } }
+        margin-bottom: 0.4rem; } }
   header nav > a {
     border-style: solid;
     border-radius: 5px;
     border-width: 2px;
-    padding: 0.2rem 1rem 0.2rem 1rem;
+    padding: 0.15rem 1rem;
     margin-right: 2rem; }
+    @media (max-width: 992px) {
+      header nav > a {
+        font-size: 1rem;
+        padding: 0.1rem 1rem; } }
     @media (max-width: 768px) {
       header nav > a {
-        padding: 1.7px;
-        font-size: 0.8rem; } }
+        font-size: 0.9rem;
+        padding: 0.1rem 1rem; } }
   header nav > a:hover {
     background-image: linear-gradient(#d9a7c7, #fffcdc);
     color: #3f3a3f; }
+
+/* BODY */
+body {
+  background-color: #dabce9;
+  font-family: 'Quicksand', sans-serif;
+  color: #312f2f; }
 
 /* SECCION INDEX */
 .section-index {
@@ -46,14 +63,20 @@ header {
   background-size: cover;
   margin-bottom: -3rem; }
   .section-index a > div {
-    height: 105vh; }
+    height: 115vh; }
+    @media (max-width: 992px) {
+      .section-index a > div {
+        height: 100vh; } }
+    @media (max-width: 768px) {
+      .section-index a > div {
+        height: 80vh; } }
   .section-index .section-index-container {
     position: relative;
     display: flex;
     justify-content: center; }
   .section-index .cartel-open {
     position: absolute;
-    top: 37.3%;
+    top: 38.2%;
     left: 45.5%;
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
@@ -61,99 +84,99 @@ header {
     animation: swinging 2s ease-in-out forwards infinite; }
     .section-index .cartel-open img {
       height: 6rem; }
+      @media (max-width: 768px) {
+        .section-index .cartel-open img {
+          height: 4.5rem; } }
 
 /* SECCION TORTAS */
 .section-tortas {
   box-shadow: 0 0 10px gray;
-  margin: 3rem 6.5rem; }
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  background-color: #e5cfef; }
   .section-tortas h1 {
     font-size: 2rem;
     text-align: center;
     padding: 1rem 0rem 1rem 0rem;
-    text-shadow: #777676 0.1em 0.1em 0.2em; }
+    text-shadow: #8f8c8c 0.1em 0.1em 0.2em; }
+    @media (max-width: 992px) {
+      .section-tortas h1 {
+        font-size: 1.9rem; } }
+    @media (max-width: 768px) {
+      .section-tortas h1 {
+        font-size: 1.7rem; } }
   .section-tortas > div {
-    display: flex;
-    justify-content: center;
     padding-bottom: 1rem; }
   .section-tortas .carousel {
-    width: 35rem; }
+    width: 100%;
+    box-shadow: 0 0 10px gray; }
     .section-tortas .carousel h2 {
-      font-size: 2rem;
-      text-shadow: white 0.1em 0.1em 0.2em; }
+      font-size: 2.8rem;
+      text-shadow: black 2.5px 2.5px 2.5px; }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .section-tortas .carousel h2 {
+          font-size: 1.8rem; } }
     .section-tortas .carousel p {
-      font-size: 1.3rem;
-      text-shadow: #777676 0.1em 0.1em 0.2em; }
+      font-family: "Commissioner", sans-serif;
+      font-weight: bold;
+      font-size: 1.45rem;
+      text-shadow: black 2.5px 2.5px 2.5px; }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .section-tortas .carousel p {
+          font-size: 1.2rem; } }
+    .section-tortas .carousel button {
+      background: none;
+      border: none; }
+      .section-tortas .carousel button span {
+        color: black !important; }
 
 /* SECCION DELICIAS */
 .section-delicias {
   box-shadow: 0 0 10px gray;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  background-color: #e5cfef; }
   .section-delicias h1 {
     font-size: 2rem;
     text-align: center;
-    padding-top: 1rem;
-    text-shadow: #777676 0.1em 0.1em 0.2em; }
+    padding: 1rem 0rem 1rem 0rem;
+    text-shadow: #8f8c8c 0.1em 0.1em 0.2em; }
+    @media (max-width: 992px) {
+      .section-delicias h1 {
+        font-size: 1.9rem; } }
+    @media (max-width: 768px) {
+      .section-delicias h1 {
+        font-size: 1.7rem; } }
   .section-delicias .section-delicias-grid {
-    /*display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(4, auto);*/
-    /*grid-gap: 1rem;*/
     padding-left: 1rem; }
     .section-delicias .section-delicias-grid img {
-      height: 25rem;
+      height: 22rem;
       box-shadow: 0 0 10px gray; }
-    .section-delicias .section-delicias-grid div {
-      /*display: flex;
-            flex-direction: column;*/
-      padding-top: 1rem; }
-      .section-delicias .section-delicias-grid div button {
-        font-size: 1.4rem; }
-        @media (max-width: 992px) {
-          .section-delicias .section-delicias-grid div button {
-            font-size: 1.1rem; } }
-        @media (max-width: 768px) {
-          .section-delicias .section-delicias-grid div button {
-            font-size: 0.8rem; } }
-      @media (min-width: 1200px) {
-        .section-delicias .section-delicias-grid div img {
-          height: 30rem; } }
+    .section-delicias .section-delicias-grid div button {
+      font-family: "Commissioner", sans-serif;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      padding: 0.1rem;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      background-color: #d6b4e6; }
       @media (max-width: 992px) {
-        .section-delicias .section-delicias-grid div img {
-          height: 18rem; } }
+        .section-delicias .section-delicias-grid div button {
+          font-size: 1.1rem; } }
       @media (max-width: 768px) {
-        .section-delicias .section-delicias-grid div img {
-          height: 12rem; } }
-
-/* SECCION DESAYUNOS */
-.section-desayunos {
-  box-shadow: 0 0 10px gray; }
-  .section-desayunos h1 {
-    font-size: 2rem;
-    text-align: center;
-    padding-top: 1rem;
-    text-shadow: #777676 0.1em 0.1em 0.2em; }
-  .section-desayunos img {
-    height: 22rem;
-    box-shadow: 0 0 10px gray; }
-  .section-desayunos .desayunos {
-    /*display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(4, auto);*/
-    padding-top: 1rem;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column; }
-    .section-desayunos .desayunos > div {
-      padding-bottom: 4rem; }
-    .section-desayunos .desayunos .caja-feliz, .section-desayunos .desayunos .caja-cumple, .section-desayunos .desayunos .caja-michi, .section-desayunos .desayunos .caja-loro {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start; }
-    .section-desayunos .desayunos h2 {
-      font-size: 1.8rem;
-      padding-bottom: 0.7rem; }
-    .section-desayunos .desayunos li {
-      line-height: 2rem; }
+        .section-delicias .section-delicias-grid div button {
+          font-size: 0.8rem; } }
+    .section-delicias .section-delicias-grid div button:hover {
+      background-color: #e2cbe9; }
+    @media (min-width: 1200px) {
+      .section-delicias .section-delicias-grid div img {
+        height: 30rem; } }
+    @media (max-width: 992px) {
+      .section-delicias .section-delicias-grid div img {
+        height: 18rem; } }
+    @media (max-width: 768px) {
+      .section-delicias .section-delicias-grid div img {
+        height: 12rem; } }
 
 /* SECCION NOSOTROS */
 .section-nosotros {
@@ -161,53 +184,89 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  background-color: #e5cfef; }
   .section-nosotros h1 {
     font-size: 2rem;
     text-align: center;
-    margin: 1rem 0rem 1rem 0rem;
-    text-shadow: #777676 0.1em 0.1em 0.2em; }
+    padding: 1rem 0rem 1rem 0rem;
+    text-shadow: #8f8c8c 0.1em 0.1em 0.2em; }
+    @media (max-width: 992px) {
+      .section-nosotros h1 {
+        font-size: 1.9rem; } }
+    @media (max-width: 768px) {
+      .section-nosotros h1 {
+        font-size: 1.7rem; } }
   .section-nosotros img {
     height: 32rem;
     box-shadow: 0 0 10px gray; }
+    @media (max-width: 1200px) {
+      .section-nosotros img {
+        height: 95%;
+        width: 95%; } }
+  @media (max-width: 1200px) {
+    .section-nosotros .diario {
+      padding-bottom: 0.3rem; } }
   .section-nosotros p {
-    padding: 0rem 1rem; }
-  .section-nosotros > div {
-    font-size: 1.5rem;
-    padding-bottom: 1rem; }
+    color: #61297d;
+    padding: 0rem 1rem;
+    font-family: "Commissioner", sans-serif;
+    font-size: 1.4rem; }
+    @media (max-width: 992px) {
+      .section-nosotros p {
+        font-size: 1.3rem; } }
+    @media (max-width: 768px) {
+      .section-nosotros p {
+        font-size: 1.2rem; } }
   .section-nosotros article {
     display: flex;
     flex-direction: column; }
     .section-nosotros article h2 {
+      font-size: 1.4rem;
       align-self: center;
       text-decoration: underline;
       padding: 0.5rem 0rem 1.5rem 0rem; }
+      @media (max-width: 992px) {
+        .section-nosotros article h2 {
+          font-size: 1.4rem; } }
+      @media (max-width: 768px) {
+        .section-nosotros article h2 {
+          font-size: 1.3rem; } }
     .section-nosotros article p {
+      font-size: 1.2rem;
       padding: 1rem 0rem 0rem 0.5rem; }
     .section-nosotros article > div {
       display: flex;
       justify-content: space-evenly; }
-      @media (max-width: 768px) {
+      @media (max-width: 1200px) {
         .section-nosotros article > div {
           display: flex;
-          flex-direction: column; } }
+          flex-direction: column;
+          align-items: center; } }
 
 /* SECCION CONTACTO */
 .section-contacto {
   box-shadow: 0 0 10px gray;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  background-color: #e5cfef; }
   .section-contacto h1 {
     font-size: 2rem;
     text-align: center;
-    padding-top: 1rem;
-    text-shadow: #777676 0.1em 0.1em 0.2em; }
+    padding: 1rem 0rem 1rem 0rem;
+    text-shadow: #8f8c8c 0.1em 0.1em 0.2em; }
+    @media (max-width: 992px) {
+      .section-contacto h1 {
+        font-size: 1.9rem; } }
+    @media (max-width: 768px) {
+      .section-contacto h1 {
+        font-size: 1.7rem; } }
   .section-contacto > div {
     display: flex;
-    justify-content: space-evenly;
-    padding: 1rem 0rem; }
+    justify-content: space-evenly; }
   .section-contacto iframe {
     box-shadow: 0 0 10px gray; }
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
       .section-contacto iframe {
         height: 35rem;
         width: 25rem; } }
@@ -222,76 +281,76 @@ header {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    padding-left: 2rem; }
-    @media (max-width: 768px) {
-      .section-contacto form {
-        align-self: center; } }
-  .section-contacto .section-contacto__form {
     font-size: 1.5rem; }
     @media (max-width: 992px) {
-      .section-contacto .section-contacto__form {
+      .section-contacto form {
         font-size: 1.2rem; } }
     @media (max-width: 768px) {
-      .section-contacto .section-contacto__form {
-        font-size: 1rem; } }
-    .section-contacto .section-contacto__form div {
-      padding: 0.7rem; }
-    .section-contacto .section-contacto__form .section-contacto__form--nombre {
+      .section-contacto form {
+        font-size: 1rem;
+        align-items: space-around; } }
+    .section-contacto form div {
+      padding: 0.7rem 0.7rem 0.7rem 0rem; }
+      @media (max-width: 768px) {
+        .section-contacto form div {
+          margin-left: -3rem; } }
+    .section-contacto form .section-contacto__form--nombre {
       display: flex;
       flex-direction: column; }
-      .section-contacto .section-contacto__form .section-contacto__form--nombre label {
-        padding-right: 3.3rem;
-        padding-bottom: 0.5rem; }
-      .section-contacto .section-contacto__form .section-contacto__form--nombre input {
+      .section-contacto form .section-contacto__form--nombre label {
+        text-shadow: #8f8c8c 0.1em 0.1em 0.2em;
+        padding: 0rem 3.3rem 0.5rem 0rem; }
+      .section-contacto form .section-contacto__form--nombre input {
         width: 22rem;
         height: 2rem;
         font-size: 1rem; }
-    .section-contacto .section-contacto__form .section-contacto__form--apellido {
+    .section-contacto form .section-contacto__form--apellido {
       display: flex;
       flex-direction: column; }
-      .section-contacto .section-contacto__form .section-contacto__form--apellido label {
-        padding-right: 3.4rem;
-        padding-bottom: 0.5rem; }
-      .section-contacto .section-contacto__form .section-contacto__form--apellido input {
+      .section-contacto form .section-contacto__form--apellido label {
+        text-shadow: #8f8c8c 0.1em 0.1em 0.2em;
+        padding: 0rem 3.4rem 0.5rem 0rem; }
+      .section-contacto form .section-contacto__form--apellido input {
         width: 22rem;
         height: 2rem;
         font-size: 1rem; }
-    .section-contacto .section-contacto__form .section-contacto__form--email {
+    .section-contacto form .section-contacto__form--email {
       display: flex;
       flex-direction: column; }
-      .section-contacto .section-contacto__form .section-contacto__form--email label {
-        padding-right: 4.5rem;
-        padding-bottom: 0.5rem; }
-      .section-contacto .section-contacto__form .section-contacto__form--email input {
+      .section-contacto form .section-contacto__form--email label {
+        text-shadow: #8f8c8c 0.1em 0.1em 0.2em;
+        padding: 0rem 4.5rem 0.5rem 0rem; }
+      .section-contacto form .section-contacto__form--email input {
         width: 22rem;
         height: 2rem;
         font-size: 1rem; }
-    .section-contacto .section-contacto__form .section-contacto__form--telefono {
+    .section-contacto form .section-contacto__form--telefono {
       display: flex;
       flex-direction: column; }
-      .section-contacto .section-contacto__form .section-contacto__form--telefono label {
-        padding-right: 2.9rem;
-        padding-bottom: 0.5rem; }
-      .section-contacto .section-contacto__form .section-contacto__form--telefono input {
+      .section-contacto form .section-contacto__form--telefono label {
+        text-shadow: #8f8c8c 0.1em 0.1em 0.2em;
+        padding: 0rem 2.9rem 0.5rem 0rem; }
+      .section-contacto form .section-contacto__form--telefono input {
         width: 22rem;
         height: 2rem;
         font-size: 1rem; }
-    .section-contacto .section-contacto__form .section-contacto__form--consulta {
+    .section-contacto form .section-contacto__form--consulta {
       display: flex;
       flex-direction: column; }
-      .section-contacto .section-contacto__form .section-contacto__form--consulta label {
-        padding-right: 2.7rem;
-        padding-bottom: 0.5rem; }
-      .section-contacto .section-contacto__form .section-contacto__form--consulta textarea {
+      .section-contacto form .section-contacto__form--consulta label {
+        text-shadow: #8f8c8c 0.1em 0.1em 0.2em;
+        padding: 0rem 2.7rem 0.5rem 0rem; }
+      .section-contacto form .section-contacto__form--consulta textarea {
         resize: none;
         font-size: medium;
         border-color: #fffbfb; }
-    .section-contacto .section-contacto__form .section-contacto__form--newsletter label {
+    .section-contacto form .section-contacto__form--newsletter label {
+      text-shadow: #8f8c8c 0.1em 0.1em 0.2em;
       padding-right: 5rem; }
-    .section-contacto .section-contacto__form .section-contacto__form--borrar-enviar {
+    .section-contacto form .section-contacto__form--borrar-enviar {
       display: flex;
       justify-content: space-evenly; }
-    .section-contacto .section-contacto__form button {
+    .section-contacto form button {
       font-size: 1.2rem;
       padding: 0.2rem; }
 
@@ -300,12 +359,10 @@ footer {
   background-color: #d5a8d5;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 2%;
   margin-top: 3rem;
   font-size: 1rem;
   max-width: 100%; }
-  footer img {
-    height: 7rem; }
   footer li a:hover, footer div a:hover {
     color: #f8f7f8; }
   footer .ig, footer .mail {
@@ -314,11 +371,27 @@ footer {
     align-items: center;
     justify-content: space-evenly; }
     footer .ig img:hover, footer .mail img:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
       -webkit-transition: transform 0.15s ease-in; }
     footer .ig img, footer .mail img {
       width: 7rem;
       height: 5.5rem; }
+      @media (max-width: 992px) {
+        footer .ig img, footer .mail img {
+          width: 6.5rem;
+          height: 5rem; } }
+      @media (max-width: 768px) {
+        footer .ig img, footer .mail img {
+          width: 6rem;
+          height: 4.5rem; } }
   footer .mail img {
     width: 8rem;
     height: 5rem; }
+    @media (max-width: 992px) {
+      footer .mail img {
+        width: 7rem;
+        height: 4.5rem; } }
+    @media (max-width: 768px) {
+      footer .mail img {
+        width: 6.3rem;
+        height: 3.9rem; } }

@@ -1,3 +1,17 @@
+/* VARIABLES */
+
+@import url("./_variables.scss");
+
+$background: rgb(218, 188, 233);
+$radius: 5px;
+$padding-h1: 1rem 0rem 1rem 0rem;
+$padding-bottom: 1rem;
+$text-shadow: rgb(143, 140, 140) 0.1em 0.1em 0.2em;
+$box-shadow: 0 0 10px gray;
+$shadow-carousel: rgb(0, 0, 0) 2.5px 2.5px 2.5px;
+$font-secondary: 'Commissioner', sans-serif;
+
+
 /* HEADER */
 
 header {
@@ -11,38 +25,50 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    div>a>img {
-        height: 7rem;
+    img {
+        height: 7.2rem;
         padding-top: 0.5rem;
-        :hover {
-            animation-name: latido;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-        }
+        @media (max-width: 992px) {height: 7rem;}
+        @media (max-width: 768px) {height: 6.9rem;}
+    }
+    img:hover {
+        animation-name: latido;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
     }
     nav {
+        font-size: 1.1rem;
         margin-bottom: 0.7rem;
-        @media (max-width: 768px) {
-            display: flex;
-            justify-content: center;
-            font-size: 0.8rem;
-        }
+        @media (max-width: 768px) {margin-bottom: 0.4rem;}
     }
     nav>a {
         border-style: solid;
-        border-radius: 5px;
+        border-radius: $radius;
         border-width: 2px;
-        padding: 0.2rem 1rem 0.2rem 1rem;
+        padding: 0.15rem 1rem;
         margin-right: 2rem;
+        @media (max-width:992px) {
+            font-size: 1rem;
+            padding: 0.1rem 1rem;
+        }
         @media (max-width:768px) {
-            padding: 1.7px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            padding: 0.1rem 1rem;
         }
     }
     nav>a:hover {
         background-image: linear-gradient(#d9a7c7, #fffcdc);
         color: rgb(63, 58, 63);
     }
+}
+
+
+/* BODY */
+
+body {
+    background-color: $background;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(49, 47, 47);
 }
 
 
@@ -54,17 +80,27 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -3rem;
-    a>div {height: 105vh;}
-    .section-index-container {position: relative; display: flex; justify-content: center;}
+    a>div {
+        height: 115vh;
+        @media (max-width:992px) {height: 100vh;}
+        @media (max-width:768px) {height: 80vh;}
+    }
+    .section-index-container {
+        position: relative; 
+        display: flex; 
+        justify-content: center;}
     .cartel-open {
-        img {height: 6rem;}
         position: absolute;
-        top: 37.3%;
+        top: 38.2%;
         left: 45.5%;
         -webkit-transform-origin: 50% 0;
         transform-origin: 50% 0;
         -webkit-animation: swinging 2s ease-in-out forwards infinite;
         animation: swinging 2s ease-in-out forwards infinite;
+        img {
+            height: 6rem;
+            @media (max-width: 768px) {height: 4.5rem;}
+        }
     }
 }
 
@@ -72,28 +108,47 @@ header {
 /* SECCION TORTAS */
 
 .section-tortas {
-    box-shadow: 0 0 10px gray;
-    margin: 3rem 6.5rem;
+    box-shadow: $box-shadow;
+    margin-top: 3rem;
+    padding-bottom: $padding-bottom;
+    background-color: lighten($background, 5%);
     h1 {
         font-size: 2rem;
         text-align: center;
-        padding: 1rem 0rem 1rem 0rem;
-        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+        padding: $padding-h1;
+        text-shadow: $text-shadow;
+        @media (max-width: 992px) {font-size: 1.9rem;}
+        @media (max-width: 768px) {font-size: 1.7rem;}
     }
     >div {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 1rem;
+        padding-bottom: $padding-bottom;
     }
     .carousel {
-        width: 35rem;
+        width: 100%;
+        box-shadow: $box-shadow;
         h2 {
-            font-size: 2rem; 
-            text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em
+            font-size: 2.8rem; 
+            text-shadow: $shadow-carousel;
+            @media (min-width: 768px) and (max-width: 992px) {
+                font-size: 1.8rem;
+            }
         }
         p {
-            font-size: 1.3rem;
-            text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em}
+            font-family: $font-secondary;
+            font-weight: bold;
+            font-size: 1.45rem;
+            text-shadow: $shadow-carousel;
+            @media (min-width: 768px) and (max-width: 992px) {
+                font-size: 1.2rem;
+            }
+        }
+        button {
+            background: none;
+            border: none;
+            span {
+                color: black !important
+            }
+        }
     }
 }
 
@@ -101,33 +156,37 @@ header {
 /* SECCION DELICIAS */
 
 .section-delicias {
-    box-shadow: 0 0 10px gray;
+    box-shadow: $box-shadow;
     margin-top: 3rem;
+    padding-bottom: $padding-bottom;
+    background-color: lighten($background, 5%);
     h1 {
         font-size: 2rem;
         text-align: center;
-        padding-top: 1rem;
-        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+        padding: $padding-h1;
+        text-shadow: $text-shadow;
+        @media (max-width: 992px) {font-size: 1.9rem;}
+        @media (max-width: 768px) {font-size: 1.7rem;}
     }
     .section-delicias-grid {
-        /*display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(4, auto);*/
-        /*grid-gap: 1rem;*/
         padding-left: 1rem;
         img {
-            height: 25rem;
-            box-shadow: 0 0 10px gray;
+            height: 22rem;
+            box-shadow: $box-shadow;
         }
         div {
-            /*display: flex;
-            flex-direction: column;*/
-            padding-top: 1rem;
             button {
-                font-size: 1.4rem;
+                font-family: $font-secondary;
+                font-weight: bold;
+                margin-top: 0.5rem;
+                padding: 0.1rem;
+                border-radius: $radius;
+                font-size: 1.2rem;
+                background-color: darken($background, 2%);
                 @media (max-width: 992px) {font-size: 1.1rem;}
                 @media (max-width: 768px) {font-size: 0.8rem;}
             }
+            button:hover {background-color: rgb(226, 203, 233);}
             img {
                 @media (min-width: 1200px) {height: 30rem;}
                 @media (max-width: 992px) {height: 18rem;}
@@ -138,79 +197,65 @@ header {
 }
 
 
-/* SECCION DESAYUNOS */
-
-.section-desayunos {
-    box-shadow: 0 0 10px gray;
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding-top: 1rem;
-        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
-    }
-    img {
-        height: 22rem;
-        box-shadow: 0 0 10px gray;
-    }
-    .desayunos {
-        /*display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(4, auto);*/
-        padding-top: 1rem;
-        font-size: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        >div {padding-bottom: 4rem;}
-        .caja-feliz, .caja-cumple, .caja-michi, .caja-loro {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-        }
-        h2 {font-size: 1.8rem;
-            padding-bottom: 0.7rem;}
-        li {line-height: 2rem;}
-    }
-}
-
-
 /* SECCION NOSOTROS */
 
 .section-nosotros {
-    box-shadow: 0 0 10px gray;
+    box-shadow: $box-shadow;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
+    padding-bottom: $padding-bottom;
+    background-color: lighten($background, 5%);
     h1 {
         font-size: 2rem;
         text-align: center;
-        margin: 1rem 0rem 1rem 0rem;
-        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+        padding: $padding-h1;
+        text-shadow: $text-shadow;
+        @media (max-width: 992px) {font-size: 1.9rem;}
+        @media (max-width: 768px) {font-size: 1.7rem;}
     }
     img {
         height: 32rem;
-        box-shadow: 0 0 10px gray;
+        box-shadow: $box-shadow;
+        @media (max-width: 1200px) {
+            height: 95%;
+            width: 95%;
+        }
     }
-    p {padding: 0rem 1rem;}
-    >div {
-        font-size: 1.5rem;
-        padding-bottom: 1rem;
+    .diario {
+        @media (max-width: 1200px) {padding-bottom: 0.3rem;}
+    }
+    p {
+        color: darken($background, 50%);
+        padding: 0rem 1rem;
+        font-family: $font-secondary;
+        font-size: 1.4rem;
+        @media (max-width: 992px) {font-size: 1.3rem;}
+        @media (max-width: 768px) {font-size: 1.2rem;}
     }
     article {
         display: flex;
         flex-direction: column;
         h2 {
+            font-size: 1.4rem;
             align-self: center;
             text-decoration: underline;
             padding: 0.5rem 0rem 1.5rem 0rem;
+            @media (max-width: 992px) {font-size: 1.4rem;}
+            @media (max-width: 768px) {font-size: 1.3rem;}
         }
-        p {padding: 1rem 0rem 0rem 0.5rem;}
+        p {
+            font-size: 1.2rem;
+            padding: 1rem 0rem 0rem 0.5rem;
+        }
         >div {
             display: flex;
             justify-content: space-evenly;
-            @media (max-width: 768px) {
+            @media (max-width: 1200px) {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
             }
         }
     }
@@ -220,22 +265,24 @@ header {
 /* SECCION CONTACTO */
 
 .section-contacto {
-    box-shadow: 0 0 10px gray;
+    box-shadow: $box-shadow;
     margin-top: 3rem;
+    background-color: lighten($background, 5%);
     h1 {
         font-size: 2rem;
         text-align: center;
-        padding-top: 1rem;
-        text-shadow: rgb(119, 118, 118) 0.1em 0.1em 0.2em
+        padding: $padding-h1;
+        text-shadow: $text-shadow;
+        @media (max-width: 992px) {font-size: 1.9rem;}
+        @media (max-width: 768px) {font-size: 1.7rem;}
     }
     >div {
         display: flex;
         justify-content: space-evenly;
-        padding: 1rem 0rem;
     }
     iframe {
-        box-shadow: 0 0 10px gray; 
-        @media (max-width: 1100px) {
+        box-shadow: $box-shadow; 
+        @media (max-width: 1200px) {
             height: 35rem;
             width: 25rem;
         }
@@ -251,26 +298,19 @@ header {
         font-size: 2rem;
         display: flex;
         flex-direction: column;
-        padding-left: 2rem;
-        @media (max-width: 768px) {
-            align-self: center ;
-        }
-    }
-    .section-contacto__form {
         font-size: 1.5rem;
-        @media (max-width: 992px) {
-            font-size: 1.2rem;
+        @media (max-width: 992px) {font-size: 1.2rem;}
+        @media (max-width: 768px) {font-size: 1rem; align-items: space-around;}
+        div {
+            padding: 0.7rem 0.7rem 0.7rem 0rem;
+            @media (max-width: 768px) {margin-left: -3rem;}
         }
-        @media (max-width: 768px) {
-            font-size: 1rem;
-        }
-        div {padding: 0.7rem;}
         .section-contacto__form--nombre {
             display: flex;
             flex-direction: column;
             label {
-                padding-right: 3.3rem;
-                padding-bottom: 0.5rem;
+                text-shadow: $text-shadow;
+                padding: 0rem 3.3rem 0.5rem 0rem;
             }
             input {
                 width: 22rem; 
@@ -282,8 +322,8 @@ header {
             display: flex;
             flex-direction: column;
             label {
-                padding-right: 3.4rem; 
-                padding-bottom: 0.5rem;
+                text-shadow: $text-shadow;
+                padding: 0rem 3.4rem 0.5rem 0rem;
             }
             input {
                 width: 22rem; 
@@ -295,8 +335,8 @@ header {
             display: flex;
             flex-direction: column;
             label {
-                padding-right: 4.5rem;
-                padding-bottom: 0.5rem;
+                text-shadow: $text-shadow;
+                padding: 0rem 4.5rem 0.5rem 0rem;
             }
             input {
                 width: 22rem; 
@@ -308,8 +348,8 @@ header {
             display: flex;
             flex-direction: column;
             label {
-                padding-right: 2.9rem;
-                padding-bottom: 0.5rem;
+                text-shadow: $text-shadow;
+                padding: 0rem 2.9rem 0.5rem 0rem;
             }
             input {
                 width: 22rem; 
@@ -321,8 +361,8 @@ header {
             display: flex;
             flex-direction: column;
             label {
-                padding-right: 2.7rem;
-                padding-bottom: 0.5rem;
+                text-shadow: $text-shadow;
+                padding: 0rem 2.7rem 0.5rem 0rem;
             }
             textarea {
                 resize: none;
@@ -331,7 +371,10 @@ header {
             }
         }
         .section-contacto__form--newsletter {
-            label {padding-right: 5rem;}
+            label {
+                text-shadow: $text-shadow;
+                padding-right: 5rem;
+            }
         }
         .section-contacto__form--borrar-enviar {
             display: flex;
@@ -351,11 +394,10 @@ footer {
     background-color:rgb(213, 168, 213);
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 2%;
     margin-top: 3rem;
     font-size: 1rem;
     max-width: 100%;
-    img {height: 7rem;}
     li a:hover, div a:hover {color: rgb(248, 247, 248);}
     .ig {
         display: flex;
@@ -363,20 +405,35 @@ footer {
         align-items: center;
         justify-content: space-evenly;
         img:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
             -webkit-transition: transform 0.15s ease-in;
         }
         img {
             width: 7rem;
             height: 5.5rem;
+            @media (max-width: 992px) {
+                width: 6.5rem;
+                height: 5rem;
+            }
+            @media (max-width: 768px) {
+                width: 6rem;
+                height: 4.5rem;
+            }
         }
     }
     .mail {
         @extend .ig;
-        img {width: 8rem;
-               height: 5rem;}
+        img {
+            width: 8rem;
+            height: 5rem;
+            @media (max-width: 992px) {
+                width: 7rem;
+                height: 4.5rem;
+            }
+            @media (max-width: 768px) {
+                width: 6.3rem;
+                height: 3.9rem;
+            }
+        }
     }
 }
-
-
-
