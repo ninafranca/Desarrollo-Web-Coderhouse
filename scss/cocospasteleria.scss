@@ -1,16 +1,12 @@
-/* VARIABLES */
+/* IMPORTS */
 
-@import url("./_variables.scss");
-
-$background: rgb(218, 188, 233);
-$radius: 5px;
-$padding-h1: 1rem 0rem 1rem 0rem;
-$padding-bottom: 1rem;
-$text-shadow: rgb(143, 140, 140) 0.1em 0.1em 0.2em;
-$box-shadow: 0 0 10px gray;
-$shadow-carousel: rgb(0, 0, 0) 2.5px 2.5px 2.5px;
-$font-secondary: 'Commissioner', sans-serif;
-
+@import './componentes/variables';
+@import './componentes/index';
+@import './componentes/tortas';
+@import './componentes/delicias';
+@import './componentes/nosotros';
+@import './componentes/contacto';
+@import './componentes/error';
 
 /* HEADER */
 
@@ -30,11 +26,11 @@ header {
         padding-top: 0.5rem;
         @media (max-width: 992px) {height: 7rem;}
         @media (max-width: 768px) {height: 6.9rem;}
-    }
-    img:hover {
-        animation-name: latido;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
+        &:hover {
+            animation-name: latido;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
     }
     nav {
         font-size: 1.1rem;
@@ -62,7 +58,6 @@ header {
     }
 }
 
-
 /* BODY */
 
 body {
@@ -70,323 +65,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: rgb(49, 47, 47);
 }
-
-
-/* SECCION INDEX */
-
-.section-index {
-    background-image: url("../assets/vidriera-cocos-fondo.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: -3rem;
-    a>div {
-        height: 115vh;
-        @media (max-width:992px) {height: 100vh;}
-        @media (max-width:768px) {height: 80vh;}
-    }
-    .section-index-container {
-        position: relative; 
-        display: flex; 
-        justify-content: center;}
-    .cartel-open {
-        position: absolute;
-        top: 38.2%;
-        left: 45.5%;
-        -webkit-transform-origin: 50% 0;
-        transform-origin: 50% 0;
-        -webkit-animation: swinging 2s ease-in-out forwards infinite;
-        animation: swinging 2s ease-in-out forwards infinite;
-        img {
-            height: 6rem;
-            @media (max-width: 768px) {height: 4.5rem;}
-        }
-    }
-}
-
-
-/* SECCION TORTAS */
-
-.section-tortas {
-    box-shadow: $box-shadow;
-    margin-top: 3rem;
-    padding-bottom: $padding-bottom;
-    background-color: lighten($background, 5%);
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
-    }
-    >div {
-        padding-bottom: $padding-bottom;
-    }
-    .carousel {
-        width: 100%;
-        box-shadow: $box-shadow;
-        h2 {
-            font-size: 2.8rem; 
-            text-shadow: $shadow-carousel;
-            @media (min-width: 768px) and (max-width: 992px) {
-                font-size: 1.8rem;
-            }
-        }
-        p {
-            font-family: $font-secondary;
-            font-weight: bold;
-            font-size: 1.45rem;
-            text-shadow: $shadow-carousel;
-            @media (min-width: 768px) and (max-width: 992px) {
-                font-size: 1.2rem;
-            }
-        }
-        button {
-            background: none;
-            border: none;
-            span {
-                color: black !important
-            }
-        }
-    }
-}
-
-
-/* SECCION DELICIAS */
-
-.section-delicias {
-    box-shadow: $box-shadow;
-    margin-top: 3rem;
-    padding-bottom: $padding-bottom;
-    background-color: lighten($background, 5%);
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
-    }
-    .section-delicias-grid {
-        padding-left: 1rem;
-        img {
-            height: 22rem;
-            box-shadow: $box-shadow;
-        }
-        div {
-            button {
-                font-family: $font-secondary;
-                font-weight: bold;
-                margin-top: 0.5rem;
-                padding: 0.1rem;
-                border-radius: $radius;
-                font-size: 1.2rem;
-                background-color: darken($background, 2%);
-                @media (max-width: 992px) {font-size: 1.1rem;}
-                @media (max-width: 768px) {font-size: 0.8rem;}
-            }
-            button:hover {background-color: rgb(226, 203, 233);}
-            img {
-                @media (min-width: 1200px) {height: 30rem;}
-                @media (max-width: 992px) {height: 18rem;}
-                @media (max-width: 768px) {height: 12rem;}
-            }
-        }
-    }
-}
-
-
-/* SECCION NOSOTROS */
-
-.section-nosotros {
-    box-shadow: $box-shadow;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
-    padding-bottom: $padding-bottom;
-    background-color: lighten($background, 5%);
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
-    }
-    img {
-        height: 32rem;
-        box-shadow: $box-shadow;
-        @media (max-width: 1200px) {
-            height: 95%;
-            width: 95%;
-        }
-    }
-    .diario {
-        @media (max-width: 1200px) {padding-bottom: 0.3rem;}
-    }
-    p {
-        color: darken($background, 50%);
-        padding: 0rem 1rem;
-        font-family: $font-secondary;
-        font-size: 1.4rem;
-        @media (max-width: 992px) {font-size: 1.3rem;}
-        @media (max-width: 768px) {font-size: 1.2rem;}
-    }
-    article {
-        display: flex;
-        flex-direction: column;
-        h2 {
-            font-size: 1.4rem;
-            align-self: center;
-            text-decoration: underline;
-            padding: 0.5rem 0rem 1.5rem 0rem;
-            @media (max-width: 992px) {font-size: 1.4rem;}
-            @media (max-width: 768px) {font-size: 1.3rem;}
-        }
-        p {
-            font-size: 1.2rem;
-            padding: 1rem 0rem 0rem 0.5rem;
-        }
-        >div {
-            display: flex;
-            justify-content: space-evenly;
-            @media (max-width: 1200px) {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    }
-}
-
-
-/* SECCION CONTACTO */
-
-.section-contacto {
-    box-shadow: $box-shadow;
-    margin-top: 3rem;
-    background-color: lighten($background, 5%);
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
-    }
-    >div {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    iframe {
-        box-shadow: $box-shadow; 
-        @media (max-width: 1200px) {
-            height: 35rem;
-            width: 25rem;
-        }
-        @media (max-width: 992px) {
-            height: 32rem;
-            width: 18rem;
-        }
-        @media (max-width: 768px) {
-            display: none;
-        }
-    }
-    form {
-        font-size: 2rem;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.5rem;
-        @media (max-width: 992px) {font-size: 1.2rem;}
-        @media (max-width: 768px) {font-size: 1rem; align-items: space-around;}
-        div {
-            padding: 0.7rem 0.7rem 0.7rem 0rem;
-            @media (max-width: 768px) {margin-left: -3rem;}
-        }
-        .section-contacto__form--nombre {
-            display: flex;
-            flex-direction: column;
-            label {
-                text-shadow: $text-shadow;
-                padding: 0rem 3.3rem 0.5rem 0rem;
-            }
-            input {
-                width: 22rem; 
-                height: 2rem; 
-                font-size: 1rem;
-            }
-        }
-        .section-contacto__form--apellido {
-            display: flex;
-            flex-direction: column;
-            label {
-                text-shadow: $text-shadow;
-                padding: 0rem 3.4rem 0.5rem 0rem;
-            }
-            input {
-                width: 22rem; 
-                height: 2rem; 
-                font-size: 1rem;
-            }
-        }
-        .section-contacto__form--email {
-            display: flex;
-            flex-direction: column;
-            label {
-                text-shadow: $text-shadow;
-                padding: 0rem 4.5rem 0.5rem 0rem;
-            }
-            input {
-                width: 22rem; 
-                height: 2rem; 
-                font-size: 1rem;
-            }
-        }
-        .section-contacto__form--telefono {
-            display: flex;
-            flex-direction: column;
-            label {
-                text-shadow: $text-shadow;
-                padding: 0rem 2.9rem 0.5rem 0rem;
-            }
-            input {
-                width: 22rem; 
-                height: 2rem; 
-                font-size: 1rem;
-            }
-        }
-        .section-contacto__form--consulta {
-            display: flex;
-            flex-direction: column;
-            label {
-                text-shadow: $text-shadow;
-                padding: 0rem 2.7rem 0.5rem 0rem;
-            }
-            textarea {
-                resize: none;
-                font-size: medium;
-                border-color: rgb(255, 251, 251);
-            }
-        }
-        .section-contacto__form--newsletter {
-            label {
-                text-shadow: $text-shadow;
-                padding-right: 5rem;
-            }
-        }
-        .section-contacto__form--borrar-enviar {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        button {
-            font-size: 1.2rem; 
-            padding: 0.2rem;
-        }
-    }
-}
-
 
 /* FOOTER */
 
@@ -396,21 +74,28 @@ footer {
     justify-content: space-between;
     padding: 2%;
     margin-top: 3rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     max-width: 100%;
+    @media (max-width: 992px) {font-size: 1.2rem;}
+    @media (max-width: 768px) {font-size: 1rem;}
+    ul {
+        font-size: 1.2rem;
+        @media (max-width: 992px) {font-size: 1rem;}
+        @media (max-width: 768px) {font-size: 0.9rem;}
+    }
     li a:hover, div a:hover {color: rgb(248, 247, 248);}
     .ig {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        img:hover {
-            transform: scale(1.2);
-            -webkit-transition: transform 0.15s ease-in;
         }
         img {
             width: 7rem;
             height: 5.5rem;
+            &:hover {
+                transform: scale(1.2);
+                -webkit-transition: transform 0.15s ease-in;
             @media (max-width: 992px) {
                 width: 6.5rem;
                 height: 5rem;

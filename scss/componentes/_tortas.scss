@@ -1,0 +1,91 @@
+/* SECCIÓN TORTAS */
+
+.section-tortas {
+    box-shadow: $box-shadow;
+    margin-top: $margin;
+    padding-bottom: $padding-bottom;
+    background-color: $background-secondary;
+    h1 {
+        font-size: $font-size;
+        text-align: center;
+        padding: $padding-h1;
+        text-shadow: $text-shadow;
+        @media (max-width: 992px) {font-size: 1.9rem;}
+        @media (max-width: 768px) {font-size: 1.7rem;}
+    }
+    >div {padding-bottom: $padding-bottom;}
+    .carousel {
+        width: 100%;
+        box-shadow: $box-shadow;
+        h2 {
+            font-size: 2.8rem; 
+            text-shadow: $shadow-carousel;
+            @media (min-width: 768px) and (max-width: 992px) {font-size: 1.8rem;}
+        }
+        p {
+            font-family: $font-secondary;
+            font-weight: bold;
+            font-size: 1.45rem;
+            text-shadow: $shadow-carousel;
+            @media (min-width: 768px) and (max-width: 992px) {font-size: 1.2rem;}
+        }
+        button {
+            background: none;
+            border: none;
+        }
+    }
+    .section-tortas-grid {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        img {
+            box-shadow: $box-shadow;
+            display: block;
+            width: 16rem;
+            height: 20rem;
+            @media (max-width: 992px) {
+                height: 16rem;
+                width: 13rem;
+                padding: 0%;
+            }
+            @media (max-width: 768px) {
+                height: 10rem;
+                width: 8rem;
+            }
+        }
+        >div {
+            padding-left: 5%;
+            @media (max-width: 992px) {padding: 0%;}
+            @media (max-width: 768px) {padding-left: 3%;}
+        }
+        .image-overlay {
+            &:hover {opacity: 1;}
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+            font-family: $font-secondary;
+            font-weight: 550;
+            div {
+                @media (max-width: 992px) {font-size: 1.3rem;}
+                @media (max-width: 768px) {font-size: 1rem;}
+            }
+          }
+        .overlay {
+            position: absolute; 
+            bottom: 0; 
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1; 
+            width: 16rem;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            @media (max-width: 992px) {width: 13rem;}
+            @media (max-width: 768px) {width: 8rem;}
+        }      
+        .image-overlay:hover .overlay {opacity: 1;}
+    }
+}

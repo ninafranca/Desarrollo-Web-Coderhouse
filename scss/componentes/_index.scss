@@ -1,0 +1,40 @@
+/* SECCIÓN INDEX */
+
+.section-index {
+    background-image: url("../assets/vidriera-cocos-fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -3rem;
+    a>div {
+        height: 115vh;
+        @media (max-width:992px) {height: 100vh;}
+        @media (max-width:768px) {height: 80vh;}
+    }
+    .section-index-container {
+        position: relative; 
+        display: flex; 
+        justify-content: center;}
+    .cartel-open {
+        position: absolute;
+        top: 38.2%;
+        left: 45.5%;
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-animation: swinging 2s ease-in-out forwards infinite;
+        animation: swinging 2s ease-in-out forwards infinite;
+        @media (max-width: 1200px) {
+            top: 38.5%;
+            left: 44.5%;
+        }
+        @media (max-width: 768px) {
+            top: 38.7%;
+            left: 43.2%;
+        }
+        img {
+            height: 6rem;
+            @media (max-width: 992px) {height: 5rem;}
+            @media (max-width: 768px) {height: 4.5rem;}
+        }
+    }
+}

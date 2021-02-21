@@ -1,0 +1,1 @@
+ErrorDocument 404 https://cocos-pasteleria.000webhostapp.com/html/error.html

@@ -1,0 +1,124 @@
+/* SECCIÓN CONTACTO */
+
+.section-contacto {
+    box-shadow: $box-shadow;
+    margin-top: $margin;
+    background-color: $background-secondary;
+    h1 {
+        font-size: $font-size;
+        text-align: center;
+        padding: $padding-h1;
+        text-shadow: $text-shadow;
+        @media (max-width: 992px) {font-size: 1.9rem;}
+        @media (max-width: 768px) {font-size: 1.7rem;}
+    }
+    >div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    iframe {
+        box-shadow: $box-shadow; 
+        @media (max-width: 1200px) {
+            height: 35rem;
+            width: 25rem;
+        }
+        @media (max-width: 992px) {
+            height: 32rem;
+            width: 18rem;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    form {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        @media (max-width: 992px) {font-size: 1.2rem;}
+        @media (max-width: 768px) {font-size: 1rem; align-items: space-around;}
+        div {
+            padding: 0.7rem 0.7rem 0.7rem 0rem;
+            @media (max-width: 768px) {margin-left: -3rem;}
+        }
+        .section-contacto__form--nombre {
+            display: flex;
+            flex-direction: column;
+            label {
+                text-shadow: $text-shadow;
+                padding: 0rem 3.3rem 0.5rem 0rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--apellido {
+            display: flex;
+            flex-direction: column;
+            label {
+                text-shadow: $text-shadow;
+                padding: 0rem 3.4rem 0.5rem 0rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--email {
+            display: flex;
+            flex-direction: column;
+            label {
+                text-shadow: $text-shadow;
+                padding: 0rem 4.5rem 0.5rem 0rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--telefono {
+            display: flex;
+            flex-direction: column;
+            label {
+                text-shadow: $text-shadow;
+                padding: 0rem 2.9rem 0.5rem 0rem;
+            }
+            input {
+                width: 22rem; 
+                height: 2rem; 
+                font-size: 1rem;
+            }
+        }
+        .section-contacto__form--consulta {
+            display: flex;
+            flex-direction: column;
+            label {
+                text-shadow: $text-shadow;
+                padding: 0rem 2.7rem 0.5rem 0rem;
+            }
+            textarea {
+                resize: none;
+                font-size: medium;
+                border-color: rgb(255, 251, 251);
+            }
+        }
+        .section-contacto__form--newsletter {
+            label {
+                text-shadow: $text-shadow;
+                padding-right: 5rem;
+            }
+        }
+        .section-contacto__form--borrar-enviar {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        button {
+            font-size: 1.2rem; 
+            padding: 0.2rem;
+        }
+    }
+}
