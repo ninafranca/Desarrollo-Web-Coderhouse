@@ -4,7 +4,7 @@
 /* VARIABLES */
 /* SECCIÓN INDEX */
 .section-index {
-  background-image: url("../assets/vidriera-cocos-fondo.jpg");
+  background-image: url("/assets/vidriera-cocos-fondo.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,6 +29,11 @@
     transform-origin: 50% 0;
     -webkit-animation: swinging 2s ease-in-out forwards infinite;
     animation: swinging 2s ease-in-out forwards infinite; }
+    .section-index .cartel-open:hover {
+      -webkit-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+      -webkit-animation: swinging 0.5s ease-in-out forwards infinite;
+      animation: swinging 0.5s ease-in-out forwards infinite; }
     @media (max-width: 1200px) {
       .section-index .cartel-open {
         top: 38.5%;
