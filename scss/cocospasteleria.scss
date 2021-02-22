@@ -1,5 +1,6 @@
 /* IMPORTS */
 
+@import './componentes/mixins';
 @import './componentes/variables';
 @import './componentes/index';
 @import './componentes/tortas';
@@ -76,10 +77,12 @@ footer {
     margin-top: 3rem;
     font-size: 1.4rem;
     max-width: 100%;
+    p {padding-bottom: 0.3rem;}
     @media (max-width: 992px) {font-size: 1.2rem;}
     @media (max-width: 768px) {font-size: 1rem;}
     ul {
         font-size: 1.2rem;
+        line-height: 1.4rem;
         @media (max-width: 992px) {font-size: 1rem;}
         @media (max-width: 768px) {font-size: 0.9rem;}
     }
@@ -100,10 +103,6 @@ footer {
                 width: 6.5rem;
                 height: 5rem;
             }
-            @media (max-width: 768px) {
-                width: 6rem;
-                height: 4.5rem;
-            }
         }
     }
     .mail {
@@ -114,10 +113,6 @@ footer {
             @media (max-width: 992px) {
                 width: 7rem;
                 height: 4.5rem;
-            }
-            @media (max-width: 768px) {
-                width: 6.3rem;
-                height: 3.9rem;
             }
         }
     }

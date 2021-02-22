@@ -1,0 +1,17 @@
+/* MIXINS */
+
+@mixin style-h1 {
+    font-size: $font-size;
+    text-align: center;
+    padding: $padding-h1;
+    text-shadow: $text-shadow;
+    @media (max-width: 992px) {font-size: 1.9rem;}
+    @media (max-width: 768px) {font-size: 1.7rem;}
+}
+
+@mixin sections {
+    box-shadow: $box-shadow;
+    margin-top: $margin;
+    padding-bottom: $padding-bottom;
+    background-color: $background-secondary;
+}

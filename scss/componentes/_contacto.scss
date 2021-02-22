@@ -1,16 +1,9 @@
 /* SECCIÓN CONTACTO */
 
 .section-contacto {
-    box-shadow: $box-shadow;
-    margin-top: $margin;
-    background-color: $background-secondary;
+    @include sections;
     h1 {
-        font-size: $font-size;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
+        @include style-h1;
     }
     >div {
         display: flex;

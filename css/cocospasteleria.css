@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* IMPORTS */
+/* MIXINS */
+/* VARIABLES */
 /* SECCIÓN INDEX */
 .section-index {
   background-image: url("../assets/vidriera-cocos-fondo.jpg");
@@ -14,7 +16,7 @@
         height: 100vh; } }
     @media (max-width: 768px) {
       .section-index a > div {
-        height: 80vh; } }
+        height: 90vh; } }
   .section-index .section-index-container {
     position: relative;
     display: flex;
@@ -182,16 +184,16 @@
       margin-top: 0.5rem;
       padding: 0.1rem;
       border-radius: 5px;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       background-color: #d6b4e6; }
       .section-delicias .section-delicias-grid div button:hover {
         background-color: #e2cbe9; }
       @media (max-width: 992px) {
         .section-delicias .section-delicias-grid div button {
-          font-size: 1.1rem; } }
+          font-size: 1.2rem; } }
       @media (max-width: 768px) {
         .section-delicias .section-delicias-grid div button {
-          font-size: 0.8rem; } }
+          font-size: 0.9rem; } }
     @media (max-width: 1200px) {
       .section-delicias .section-delicias-grid div img {
         height: 24rem; } }
@@ -205,12 +207,12 @@
 /* SECCIÓN NOSOTROS */
 .section-nosotros {
   box-shadow: 0 0 10px gray;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 3rem;
   padding-bottom: 1rem;
-  background-color: #e5cfef; }
+  background-color: #e5cfef;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   .section-nosotros h1 {
     font-size: 2rem;
     text-align: center;
@@ -273,6 +275,7 @@
 .section-contacto {
   box-shadow: 0 0 10px gray;
   margin-top: 3rem;
+  padding-bottom: 1rem;
   background-color: #e5cfef; }
   .section-contacto h1 {
     font-size: 2rem;
@@ -448,6 +451,8 @@ footer {
   margin-top: 3rem;
   font-size: 1.4rem;
   max-width: 100%; }
+  footer p {
+    padding-bottom: 0.3rem; }
   @media (max-width: 992px) {
     footer {
       font-size: 1.2rem; } }
@@ -455,7 +460,8 @@ footer {
     footer {
       font-size: 1rem; } }
   footer ul {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    line-height: 1.4rem; }
     @media (max-width: 992px) {
       footer ul {
         font-size: 1rem; } }
@@ -479,10 +485,6 @@ footer {
         footer img:hover {
           width: 6.5rem;
           height: 5rem; } }
-      @media (max-width: 768px) {
-        footer img:hover {
-          width: 6rem;
-          height: 4.5rem; } }
   footer .mail img {
     width: 8rem;
     height: 5rem; }
@@ -490,7 +492,3 @@ footer {
       footer .mail img {
         width: 7rem;
         height: 4.5rem; } }
-    @media (max-width: 768px) {
-      footer .mail img {
-        width: 6.3rem;
-        height: 3.9rem; } }

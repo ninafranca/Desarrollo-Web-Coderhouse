@@ -1,20 +1,12 @@
 /* SECCIÓN NOSOTROS */
 
 .section-nosotros {
-    box-shadow: $box-shadow;
+    @include sections;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: $margin;
-    padding-bottom: $padding-bottom;
-    background-color: $background-secondary;
     h1 {
-        font-size: $font-size;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
+        @include style-h1;
     }
     img {
         height: 32rem;

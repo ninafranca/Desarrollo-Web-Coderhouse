@@ -1,17 +1,9 @@
 /* SECCIÓN DELICIAS */
 
 .section-delicias {
-    box-shadow: $box-shadow;
-    margin-top: $margin;
-    padding-bottom: $padding-bottom;
-    background-color: $background-secondary;
+    @include sections;
     h1 {
-        font-size: $font-size;
-        text-align: center;
-        padding: $padding-h1;
-        text-shadow: $text-shadow;
-        @media (max-width: 992px) {font-size: 1.9rem;}
-        @media (max-width: 768px) {font-size: 1.7rem;}
+        @include style-h1;
     }
     .section-delicias-grid {
         padding-left: 5%;
@@ -29,11 +21,11 @@
                 margin-top: 0.5rem;
                 padding: 0.1rem;
                 border-radius: $radius;
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 background-color: darken($background, 2%);
                 &:hover {background-color: rgb(226, 203, 233);}
-                @media (max-width: 992px) {font-size: 1.1rem;}
-                @media (max-width: 768px) {font-size: 0.8rem;}
+                @media (max-width: 992px) {font-size: 1.2rem;}
+                @media (max-width: 768px) {font-size: 0.9rem;}
             }
             img {
                 @media (max-width: 1200px) {height: 24rem;}
