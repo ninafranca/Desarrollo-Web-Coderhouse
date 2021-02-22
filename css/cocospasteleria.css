@@ -4,7 +4,7 @@
 /* VARIABLES */
 /* SECCIÓN INDEX */
 .section-index {
-  background-image: url("/assets/vidriera-cocos-fondo.jpg");
+  background-image: url("../assets/vidriera-cocos-fondo.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
