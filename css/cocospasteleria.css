@@ -14,9 +14,6 @@
     @media (max-width: 992px) {
       .section-index a > div {
         height: 100vh; } }
-    @media (max-width: 768px) {
-      .section-index a > div {
-        height: 90vh; } }
   .section-index .section-index-container {
     position: relative;
     display: flex;
