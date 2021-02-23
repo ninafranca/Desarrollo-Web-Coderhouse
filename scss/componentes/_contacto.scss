@@ -10,7 +10,7 @@
         justify-content: space-evenly;
     }
     iframe {
-        box-shadow: $box-shadow; 
+        box-shadow: $box-shadow;
         @media (max-width: 1200px) {
             height: 35rem;
             width: 25rem;

@@ -99,17 +99,29 @@
       display: block;
       width: 16rem;
       height: 20rem; }
+      @media (min-width: 1400px) and (max-width: 1600px) {
+        .section-tortas .section-tortas-grid img {
+          height: 25rem;
+          width: 20rem; } }
       @media (max-width: 992px) {
         .section-tortas .section-tortas-grid img {
           height: 16rem;
-          width: 13rem;
-          padding: 0%; } }
+          width: 13rem; } }
       @media (max-width: 768px) {
         .section-tortas .section-tortas-grid img {
           height: 10rem;
           width: 8rem; } }
     .section-tortas .section-tortas-grid > div {
       padding-left: 5%; }
+      @media (max-width: 1600px) {
+        .section-tortas .section-tortas-grid > div {
+          padding-left: 4.5%; } }
+      @media (max-width: 1400px) {
+        .section-tortas .section-tortas-grid > div {
+          padding-left: 5.5%; } }
+      @media (max-width: 1200px) {
+        .section-tortas .section-tortas-grid > div {
+          padding-left: 2.6%; } }
       @media (max-width: 992px) {
         .section-tortas .section-tortas-grid > div {
           padding: 0%; } }
@@ -171,6 +183,12 @@
         font-size: 1.7rem; } }
   .section-delicias .section-delicias-grid {
     padding-left: 5%; }
+    @media (max-width: 1600px) {
+      .section-delicias .section-delicias-grid {
+        padding-left: 4.5%; } }
+    @media (max-width: 1400px) {
+      .section-delicias .section-delicias-grid {
+        padding-left: 2.9%; } }
     @media (max-width: 1200px) {
       .section-delicias .section-delicias-grid {
         padding-left: 2%; } }
@@ -192,13 +210,19 @@
       font-size: 1.3rem;
       background-color: #d6b4e6; }
       .section-delicias .section-delicias-grid div button:hover {
-        background-color: #e2cbe9; }
+        background-color: #e5cfef; }
       @media (max-width: 992px) {
         .section-delicias .section-delicias-grid div button {
           font-size: 1.2rem; } }
       @media (max-width: 768px) {
         .section-delicias .section-delicias-grid div button {
           font-size: 0.9rem; } }
+    @media (max-width: 1600px) {
+      .section-delicias .section-delicias-grid div img {
+        height: 30rem; } }
+    @media (max-width: 1400px) {
+      .section-delicias .section-delicias-grid div img {
+        height: 27rem; } }
     @media (max-width: 1200px) {
       .section-delicias .section-delicias-grid div img {
         height: 24rem; } }
@@ -229,16 +253,6 @@
     @media (max-width: 768px) {
       .section-nosotros h1 {
         font-size: 1.7rem; } }
-  .section-nosotros img {
-    height: 32rem;
-    box-shadow: 0 0 10px gray; }
-    @media (max-width: 1200px) {
-      .section-nosotros img {
-        height: 95%;
-        width: 95%; } }
-  @media (max-width: 1200px) {
-    .section-nosotros .diario {
-      padding-bottom: 0.3rem; } }
   .section-nosotros p {
     color: #61297d;
     padding: 0rem 1rem;
@@ -250,28 +264,38 @@
     @media (max-width: 768px) {
       .section-nosotros p {
         font-size: 1.2rem; } }
-  .section-nosotros article {
+  .section-nosotros .periodico {
     display: flex;
     flex-direction: column; }
-    .section-nosotros article h2 {
+    .section-nosotros .periodico h2 {
       font-size: 1.4rem;
       align-self: center;
       text-decoration: underline;
       padding: 0.5rem 0rem 1.5rem 0rem; }
       @media (max-width: 992px) {
-        .section-nosotros article h2 {
+        .section-nosotros .periodico h2 {
           font-size: 1.4rem; } }
       @media (max-width: 768px) {
-        .section-nosotros article h2 {
+        .section-nosotros .periodico h2 {
           font-size: 1.3rem; } }
-    .section-nosotros article p {
+    .section-nosotros .periodico p {
       font-size: 1.2rem;
       padding: 1rem 0rem 0rem 0.5rem; }
-    .section-nosotros article > div {
+    .section-nosotros .periodico img {
+      height: 32rem;
+      box-shadow: 0 0 10px gray; }
+      @media (max-width: 1200px) {
+        .section-nosotros .periodico img {
+          height: 95%;
+          width: 95%; } }
+    @media (max-width: 1200px) {
+      .section-nosotros .periodico .img-diario {
+        padding-bottom: 0.3rem; } }
+    .section-nosotros .periodico > div {
       display: flex;
       justify-content: space-evenly; }
       @media (max-width: 1200px) {
-        .section-nosotros article > div {
+        .section-nosotros .periodico > div {
           display: flex;
           flex-direction: column;
           align-items: center; } }

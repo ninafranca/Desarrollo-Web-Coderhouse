@@ -7,6 +7,8 @@
     }
     .section-delicias-grid {
         padding-left: 5%;
+        @media (max-width: 1600px) {padding-left: 4.5%;}
+        @media (max-width: 1400px) {padding-left: 2.9%;}
         @media (max-width: 1200px) {padding-left: 2%;}
         @media (max-width: 992px) {padding-left: 1.8%;}
         @media (max-width: 768px) {padding-left: 3%;}
@@ -23,11 +25,13 @@
                 border-radius: $radius;
                 font-size: 1.3rem;
                 background-color: darken($background, 2%);
-                &:hover {background-color: rgb(226, 203, 233);}
+                &:hover {background-color: $background-secondary;}
                 @media (max-width: 992px) {font-size: 1.2rem;}
                 @media (max-width: 768px) {font-size: 0.9rem;}
             }
             img {
+                @media (max-width: 1600px) {height: 30rem;}
+                @media (max-width: 1400px) {height: 27rem;}
                 @media (max-width: 1200px) {height: 24rem;}
                 @media (max-width: 992px) {height: 18rem;}
                 @media (max-width: 768px) {height: 12rem;}
